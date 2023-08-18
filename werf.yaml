@@ -1,0 +1,14 @@
+configVersion: 1
+project: robots
+---
+image: backend
+dockerfile: Dockerfile
+target: backend
+args:
+  NPM_TOKEN: {{ env "NPM_TOKEN" }}
+---
+image: frontend
+dockerfile: Dockerfile
+target: frontend
+args:
+  NPM_TOKEN: {{ env "NPM_TOKEN" }}

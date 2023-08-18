@@ -1,0 +1,9 @@
+giterminismConfigVersion: 1
+helm: 
+  allowUncommittedFiles:
+    - .helm/charts
+    - .helm/Chart.lock
+config:
+  goTemplateRendering:
+    allowEnvVariables:
+      - "NPM_TOKEN"

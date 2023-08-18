@@ -1,0 +1,48 @@
+# Treasury
+query getDaoTreasury($daoAddress: ID!) {
+    daos(where: {id: $daoAddress}) {
+        treasury
+    }
+}
+
+# Membership
+query getDaosAdmins($first: Int!, $skip: Int!, $where: Dao_filter) {
+	daos(first: $first, skip: $skip, where: $where) {
+        id
+        controller {
+            admins {
+                user {
+                    id
+                }
+            }
+        }
+    }
+}
+
+query getDaoMembersByNft($daoAddress: ID!, $firstNfts: Int!, $skipNfts: Int!) {
+	daos(where: { id: $daoAddress }) {
+        collection {
+            nfts (first: $firstNfts, skip: $skipNfts)  {
+                owner{
+                    id
+                }
+                tier {
+                   nativeID
+                }
+            }
+        }
+    }
+}
+
+query getCollectionNfts($collectionId: ID!, $first: Int!, $skipNfts: Int!) {
+	collection(id: $collectionId) {
+        nfts (first: $first, skip: $skipNfts) {
+            owner{
+                id
+            }
+            tier {
+                nativeID
+            }
+        }
+    }
+}

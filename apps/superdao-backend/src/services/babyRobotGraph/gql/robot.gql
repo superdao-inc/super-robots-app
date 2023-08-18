@@ -1,0 +1,11 @@
+query getTokensInCollectionForOwner($owner: Bytes!, $collection: String!) {
+	nfts( where: { owner: $owner, collection: $collection} ) {
+        tokenID
+	}
+}
+
+query getOwnerByTokenId($tokenID: BigInt!, $collection: String!) {
+	nfts( where: { tokenID: $tokenID, collection: $collection } ) {
+		owner
+	}
+}

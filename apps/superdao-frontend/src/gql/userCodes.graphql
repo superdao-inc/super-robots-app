@@ -1,0 +1,33 @@
+query GetCodeInvitationsInfo {
+	getCodeInvitationsInfo {
+		code
+		isCodeFlowAvailable
+		remainingCodeActivations
+		maxCodeActivations
+	}
+}
+
+query GetCodeInvitationsInfoByCode($getCodeInvitationsInfoByCodeInput: GetCodeInvitationsInfoByCodeInput!) {
+	getCodeInvitationsInfoByCode(getCodeInvitationsInfoByCodeInput: $getCodeInvitationsInfoByCodeInput) {
+		codeOwner
+		code
+		isCodeFlowAvailable
+		remainingCodeActivations
+		maxCodeActivations
+	}
+}
+
+mutation AddActivationsToUserCode {
+	addActivationsToUserCode {
+		status
+		isCodeRefilled
+	}
+}
+
+query GetCanUserRefillCode {
+	getCanUserRefillCode
+}
+
+query IsUserInfluencer {
+	isUserInfluencer
+}

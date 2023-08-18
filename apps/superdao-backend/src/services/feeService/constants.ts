@@ -1,0 +1,1 @@
+export const GUARANTEE_GAS_LIMIT = 5_000_000;

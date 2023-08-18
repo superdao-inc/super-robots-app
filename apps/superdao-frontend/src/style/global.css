@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* https://uploadcare.com/community/t/tailwind-css-reset-causes-the-background-for-the-main-button-to-be-white/2032/2 */
+.uploadcare--button_primary {
+	background: #157cfc;
+}
+
+@layer utilities {
+	/* pure css example: https://codepen.io/chriscoyier/pen/YzXBYvL*/
+	.mobile-has-more-content {
+		background:
+			/* Shadow Cover TOP */ linear-gradient(rgb(27, 32, 42) 30%, rgba(27, 32, 42, 0)) center top,
+			/* Shadow Cover BOTTOM */ linear-gradient(rgba(27, 32, 42, 0), rgb(27, 32, 42) 70%) center bottom,
+			/* Shadow TOP */ radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) center top,
+			/* Shadow BOTTOM */ radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) center bottom;
+
+
+		background-repeat: no-repeat;
+		background-size: 100% 40px, 100% 40px, 100% 14px, 100% 20px;
+		background-attachment: local, local, scroll, scroll;
+	}
+
+	.desktop-has-more-content {
+		background:
+			/* Shadow Cover TOP */ linear-gradient(rgb(37, 43, 54) 30%, rgba(37, 43, 54, 0)) center top,
+			/* Shadow Cover BOTTOM */ linear-gradient(rgba(37, 43, 54, 0), rgb(37, 43, 54) 70%) center bottom,
+			/* Shadow TOP */ radial-gradient(farthest-side at 50% 0, rgba(70, 76, 89, .4), rgba(70, 76, 89, 0)) center top,
+			/* Shadow BOTTOM */ radial-gradient(farthest-side at 50% 100%, rgba(70, 76, 89, 0.4), rgba(70, 76, 89, 0))
+			center bottom;
+
+		background-repeat: no-repeat;
+		background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+		background-attachment: local, local, scroll, scroll;
+	}
+}
+
+@layer components {
+	.btn-gradient {
+		@apply from-robotOrange to-robotViolet bg-gradient-to-r hover:from-robotOrangeHover hover:to-robotVioletHover active:from-robotOrangeActive active:to-robotVioletActive transition-all duration-100;
+	}
+}
+
+html, body, #__next {
+	height: 100%;
+}
+
+.uploadcare--widget,
+.uploadcare--widget__button,
+.uploadcare--widget__dragndrop-area,
+.uploadcare--progress,
+.uploadcare--widget__text {
+	display: none;
+}
+
+.uploadcare--menu__item_tab_preview {
+	padding-left: 20px;
+}
+
+.Modal {
+	position: absolute;
+	top: auto;
+	bottom: 0;
+	left: 50%;
+	right: auto;
+	outline: 0;
+
+	box-shadow: 0px 8px 48px rgba(0, 0, 0, 0.16), 0px 0px 96px rgba(0, 0, 0, 0.08);
+	background: #23262F;
+	overflow: visible;
+
+	border: 0;
+	border-radius: 24px 24px 0 0;
+
+	transform: translate(-50%, 0);
+
+	min-width: min(400px, 100%);
+	width: min(400px, 100%);
+}
+
+@media (min-width: 744px) {
+	.Modal {
+		top: 50%;
+		bottom: auto;
+
+		border-radius: 24px;
+
+		transform: translate(-50%, -50%);
+	}
+}
+
+.ModalOverlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.9);
+	z-index: 20;
+}

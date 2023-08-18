@@ -1,0 +1,37 @@
+mutation AuthNonce($nonceData: NonceDto!) {
+	authNonce(nonceData: $nonceData)
+}
+
+mutation AuthMagicLinkNonce($magicLinkNonceData: MagicLinkNonceDto!) {
+	authMagicLinkNonce(magicLinkNonceData: $magicLinkNonceData)
+}
+
+mutation AuthSignature($signatureData: SignatureDto!) {
+	authSignature(signatureData: $signatureData) {
+		...PublicUser
+		createdAt
+	}
+}
+
+mutation AuthSmartWallet($smartWalletSignatureData: SmartWalletSignatureDto!) {
+	authSmartWallet(smartWalletSignatureData: $smartWalletSignatureData) {
+		...PublicUser
+		createdAt
+	}
+}
+
+mutation ValidateMagicLinkToken($didToken: String!) {
+	validateMagicLinkToken(didToken: $didToken)
+}
+
+mutation ValidateMagicEmail($email: String!) {
+	validateMagicEmail(email: $email)
+}
+
+mutation ValidateMagicEmailAndAddress($email: String!, $walletAddress: String!) {
+	validateMagicEmailAndAddress(email: $email, walletAddress: $walletAddress)
+}
+
+mutation Logout {
+	logout
+}

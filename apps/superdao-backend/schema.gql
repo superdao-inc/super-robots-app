@@ -1,0 +1,443 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Links {
+  id: ID!
+  entityId: String!
+  site: String
+  twitter: String
+  instagram: String
+  telegram: String
+  discord: String
+  facebook: String
+}
+
+type UserCodes {
+  id: ID!
+  createdAt: DateTime!
+  code: String!
+  activationsCount: Int!
+  owner: User!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type CustomItem {
+  id: ID!
+  createdAt: DateTime!
+  layerType: String!
+  layerName: String!
+}
+
+type User {
+  id: ID!
+  walletAddress: String!
+  walletType: UserWalletType!
+  createdAt: DateTime!
+  ens: String
+  nonce: String!
+  displayName: String
+  slug: String!
+  bio: String
+  email: String
+  emailVerified: Boolean!
+  avatar: String
+  cover: String
+  links: Links!
+  hasBetaAccess: Boolean!
+  isClaimed: Boolean!
+  isSupervisor: Boolean!
+  hasCookieDecision: Boolean!
+  agreedWithCookie: Boolean!
+}
+
+"""The type of wallet the user is using"""
+enum UserWalletType {
+  SMART_WALLET
+  METAMASK
+  WALLET_CONNECT
+  MAGIC_LINK
+}
+
+type AllUserResponse {
+  items: [User!]!
+  count: Int!
+}
+
+type UpdateUserEmailResponse {
+  error: String
+  nextAttemptToSendEmail: Float
+}
+
+type CheckUserOTPEmailResponse {
+  otpTimestamp: Float!
+  resendTimestamp: Float!
+}
+
+type ValidateUserOTPEmailResponse {
+  status: OTPValidationStatus!
+}
+
+enum OTPValidationStatus {
+  EXPIRED
+  FAIL
+  SUCCESS
+}
+
+type MintBabyRobotResponse {
+  status: BabyRobotMintResponseStatus!
+}
+
+enum BabyRobotMintResponseStatus {
+  ERROR
+  SUCCESS
+  ALREADY_MINTED
+  ALREADY_WAITLISTED
+  EMAIL_MISSING
+  IP_EXISTS
+}
+
+type UpdateRobotLayersResponse {
+  status: UpdateRobotLayersResponseStatus!
+}
+
+enum UpdateRobotLayersResponseStatus {
+  FAIL
+  SUCCESS
+  ALREADY_UPDATING
+  SANITIZE_FAIL
+}
+
+type IsRobotUpdatingResponse {
+  status: Boolean!
+}
+
+type BabyRobotMint {
+  id: ID!
+  transactionHash: String
+  tokenId: String
+  imageNameSha: String!
+  status: RobotMintAndWaitlistStatus!
+  createdAt: DateTime!
+  burnedAt: DateTime
+}
+
+enum RobotMintAndWaitlistStatus {
+  IN_GENERATING_QUEUE
+  IN_WAITLIST
+  IN_QUEUE
+  STARTED
+  CLAIMED
+}
+
+type PropertyTrait {
+  trait_type: String!
+  value: String!
+}
+
+type StatTrait {
+  display_type: String!
+  trait_type: String!
+  value: Int!
+}
+
+type MintedBabyRobotInfo {
+  imageName: String!
+  propertyTraits: [PropertyTrait!]!
+  statTraits: [StatTrait!]!
+}
+
+type RobotTokenOwner {
+  owner: String!
+}
+
+type MintedBabyRobotInfoWithImageMeta {
+  imageName: String!
+  propertyTraits: [PropertyTrait!]!
+  statTraits: [StatTrait!]!
+  imageUrl: String!
+  isImageInStorage: Boolean!
+}
+
+type UsersInvitedByCurrentUserCode {
+  id: String!
+  walletAddress: String!
+  tokenId: String
+}
+
+type MintedBabyRobotInfoWithImageMetaAndOwner {
+  imageName: String!
+  propertyTraits: [PropertyTrait!]!
+  statTraits: [StatTrait!]!
+  imageUrl: String!
+  isImageInStorage: Boolean!
+  owner: String!
+  imageNameSha: String!
+}
+
+type RobotAssetMappingElem {
+  path: String!
+  translation: String!
+}
+
+type RobotAssetsMapping {
+  BG: [RobotAssetMappingElem!]!
+  EYES: [RobotAssetMappingElem!]!
+  TUBES: [RobotAssetMappingElem!]!
+  BODY: [RobotAssetMappingElem!]!
+  LEGS: [RobotAssetMappingElem!]!
+}
+
+type BabyRobotsMintCount {
+  count: Int!
+}
+
+type IsUserEligibleForMintResponse {
+  status: Boolean!
+}
+
+type ScoringAudienceItem {
+  wallet: String!
+  score: Int!
+  tags: [String!]!
+  nftsCount: Int!
+  ens: String
+  twitterUrl: String
+  twitterAvatarUrl: String
+  twitterUsername: String
+  walletUsdCap: Int!
+  twitterFollowersCount: Int
+  activity: [String!]!
+  lastMonthTxCount: Int!
+}
+
+type UsersInvitedByCurrentUserCodeResponse {
+  items: [UsersInvitedByCurrentUserCode!]!
+  count: Int!
+}
+
+type BabyRobotCustomizeEligibleResponse {
+  maxActivationsCount: Int!
+  usedActivationsCount: Int!
+  isUserEligibleForInvites: Boolean!
+}
+
+type CustomItemByUserResponse {
+  id: String!
+  customItem: CustomItem!
+}
+
+type CustomItemByTokenResponse {
+  id: String!
+  isEnabled: Boolean!
+  customItem: CustomItem!
+}
+
+type CodeInvitationsInfoDto {
+  code: String!
+  isCodeFlowAvailable: Boolean!
+  remainingCodeActivations: Int!
+  maxCodeActivations: Int!
+}
+
+type CodeInvitationsInfoWithOwnerDataDto {
+  code: String!
+  isCodeFlowAvailable: Boolean!
+  remainingCodeActivations: Int!
+  maxCodeActivations: Int!
+  codeOwner: String!
+}
+
+type AddActivationsToUserCodeResponse {
+  status: Boolean!
+  isCodeRefilled: Boolean!
+}
+
+input LinksInput {
+  id: ID!
+  entityId: String!
+  site: String
+  twitter: String
+  instagram: String
+  telegram: String
+  discord: String
+  facebook: String
+}
+
+input UserCodesInput {
+  id: ID!
+  createdAt: DateTime!
+  code: String!
+  activationsCount: Int!
+  owner: UserInput!
+}
+
+input CustomItemInput {
+  id: ID!
+  createdAt: DateTime!
+  layerType: String!
+  layerName: String!
+}
+
+input UserInput {
+  id: ID!
+  walletAddress: String!
+  walletType: UserWalletType!
+  createdAt: DateTime!
+  ens: String
+  nonce: String!
+  displayName: String
+  slug: String!
+  bio: String
+  email: String
+  emailVerified: Boolean!
+  avatar: String
+  cover: String
+  links: LinksInput!
+  hasBetaAccess: Boolean!
+  isClaimed: Boolean!
+  isSupervisor: Boolean!
+  hasCookieDecision: Boolean!
+  agreedWithCookie: Boolean!
+}
+
+type Query {
+  checkUserOTPEmailResponse: CheckUserOTPEmailResponse!
+  currentUser: User!
+  userById(id: String!): User!
+  userBySlug(userslug: String!): User!
+  allUsers(offset: Int = 0, limit: Int = 20, search: String = ""): AllUserResponse!
+  hasCookieDecision: Boolean!
+  mintedBabyRobotByUser(userId: String!): BabyRobotMint
+  mintedBabyRobotByCurrentUser: BabyRobotMint
+  mintedBabyRobotInfo: MintedBabyRobotInfo
+  mintedBabyRobotInfoByTokenId(tokenId: String!): MintedBabyRobotInfo
+  mintedBabyRobotInfoWithImageMetaByWallet(walletAddress: String!): MintedBabyRobotInfoWithImageMeta
+  mintedBabyRobotInfoWithImageMetaAndOwnerByTokenId(tokenId: String!): MintedBabyRobotInfoWithImageMetaAndOwner
+  usersInvitedByCurrentUserCode(offset: Int = 0, limit: Int = 100): UsersInvitedByCurrentUserCodeResponse!
+  robotAssetsMapping: RobotAssetsMapping!
+  isUserEligibleForMint: IsUserEligibleForMintResponse!
+  walletScoringData(walletAddress: String!): ScoringAudienceItem
+  babyRobotsMintCount: BabyRobotsMintCount!
+  userRobotsTokenIds: [String!]!
+  userRobotMintIsInProgress: Boolean!
+  isUserRobotTokenOwnerOrMinter: Boolean!
+  isUserRobotTokenOwner(tokenId: String!): Boolean!
+  isRobotUpdating(tokenId: String!): IsRobotUpdatingResponse!
+  robotTokenOwner(tokenId: String!): RobotTokenOwner
+  userEligibleForCustomizeData: BabyRobotCustomizeEligibleResponse
+  getUserCustomItems: [CustomItemByUserResponse!]!
+  getTokenCustomItems(tokenId: String!): [CustomItemByTokenResponse!]!
+  getCodeInvitationsInfo: CodeInvitationsInfoDto
+  getCodeInvitationsInfoByCode(getCodeInvitationsInfoByCodeInput: GetCodeInvitationsInfoByCodeInput!): CodeInvitationsInfoWithOwnerDataDto
+  getCanUserRefillCode: Boolean!
+  isUserInfluencer: Boolean!
+  getIsStatisticClickCustomizeRegistered: Boolean!
+  getIsStatisticClickNotifyMeRegistered: Boolean!
+}
+
+input GetCodeInvitationsInfoByCodeInput {
+  code: String!
+}
+
+type Mutation {
+  authNonce(nonceData: NonceDto!): String!
+  authSignature(signatureData: SignatureDto!): User!
+  authSmartWallet(smartWalletSignatureData: SmartWalletSignatureDto!): User!
+  validateMagicLinkToken(didToken: String!): Boolean!
+  validateMagicEmail(email: String!): Boolean!
+  validateMagicEmailAndAddress(email: String!, walletAddress: String!): Boolean!
+  authMagicLinkNonce(magicLinkNonceData: MagicLinkNonceDto!): String!
+  logout: Boolean!
+  sendEmailVerificationMessage(sendEmailVerificationMessageInput: SendEmailVerificationMessageInput!): UpdateUserEmailResponse!
+  updateUserEmail(updateUserEmailInput: UpdateUserEmailInput!): UpdateUserEmailResponse!
+  removeUserEmail: Boolean!
+  resetUserOTPAndEmail: Boolean!
+  validateUserOTPEmailResponse(validateUserOTPEmailInput: ValidateUserOTPEmailInput!): ValidateUserOTPEmailResponse!
+  updateUser(updateUserData: UpdateUserInput!): User!
+  joinBeta: User!
+  decideAboutCookies(decision: Boolean!): Boolean!
+  getUserRobotsTokenIds: [String!]!
+  validateCanMintBabyRobot: MintBabyRobotResponse!
+  mintBabyRobot(interests: [String!]!): MintBabyRobotResponse!
+  mintBabyRobotByCode(code: String!): MintBabyRobotResponse!
+  waitlistBabyRobot: MintBabyRobotResponse!
+  updateRobotLayers(updateRobotLayersRequest: UpdateRobotLayersRequest!): UpdateRobotLayersResponse!
+  getRobotTokenOwner(tokenId: String!): RobotTokenOwner
+  addActivationsToUserCode: AddActivationsToUserCodeResponse!
+  saveStatisticClickCustomize: Boolean!
+  saveStatisticClickNotifyMe: Boolean!
+}
+
+input NonceDto {
+  walletAddress: String!
+}
+
+input SignatureDto {
+  walletAddress: String!
+  nonce: String!
+  signature: String!
+  walletType: UserWalletType!
+}
+
+input SmartWalletSignatureDto {
+  walletAddress: String!
+  nonce: String!
+  signature: String!
+}
+
+input MagicLinkNonceDto {
+  walletAddress: String!
+  email: String!
+  discord: String = ""
+  twitter: String = ""
+  facebook: String = ""
+}
+
+input SendEmailVerificationMessageInput {
+  userPageAnchor: String!
+}
+
+input UpdateUserEmailInput {
+  email: String!
+  userPageAnchor: String!
+}
+
+input ValidateUserOTPEmailInput {
+  otp: String!
+}
+
+input UpdateUserInput {
+  id: String!
+  hasBetaAccess: Boolean
+  displayName: String
+  slug: String
+  bio: String
+  avatar: String
+  cover: String
+  twitter: String
+  site: String
+  instagram: String
+  telegram: String
+  discord: String
+}
+
+input UpdateRobotLayersRequest {
+  tokenId: String!
+  common: CommonUpdateRobotLayersPart!
+  toOffIds: [String!]!
+  toOnIds: [String!]!
+  toTransferIds: [String!]!
+}
+
+input CommonUpdateRobotLayersPart {
+  bg: String!
+  body: String!
+  eyes: String!
+  tubes: String!
+  legs: String!
+}

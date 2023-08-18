@@ -1,0 +1,65 @@
+{
+	"name": "monorepo",
+	"private": true,
+	"engines": {
+		"node": ">=16.14",
+		"pnpm": ">=7.15.0"
+	},
+	"scripts": {
+		"dev": "turbo run dev --parallel --no-cache --filter=superdao-*",
+		"prebuild": "turbo run prebuild",
+		"build": "turbo run build",
+		"codegen": "pnpm run codegen:backend:graph-robots:types && pnpm run codegen:frontend",
+		"codegen:docker": "pnpm run codegen:backend:graph-robots:types && pnpm run codegen:frontend:docker",
+		"codegen:frontend": "cross-env CODEGEN_ONLY_FRONTEND=1 graphql-codegen -c codegen.js",
+		"codegen:frontend:docker": "CODEGEN_ONLY_FRONTEND=1 graphql-codegen -c codegen.js",
+		"codegen:backend:graph-robots:types": "graphql-codegen --config apps/superdao-backend/src/services/the-graph/robots/config/codegen.robots.yml",
+		"codegen:ui-tests": "cross-env CODEGEN_ONLY_TEST=1 graphql-codegen -c codegen.js",
+		"codegen:scoring-api": "pnpm --prefix apps/superdao-backend script:codegen-scoring-api ",
+		"lint": "turbo run lint",
+		"lint:ci": "turbo run lint --no-cache",
+		"migrate": "pnpm --prefix apps/superdao-backend migrate",
+		"revert": "pnpm --prefix apps/superdao-backend revert",
+		"gm": "pnpm --prefix apps/superdao-backend generate:lint",
+		"typecheck": "turbo run typecheck",
+		"test": "turbo run test",
+		"test:ci": "DISABLE_ENVALID=1 pnpm -r test:ci",
+		"test:merge-reports": "jrm junit.xml \"apps/**/junit.xml\"",
+		"ui-test:run": "pnpm -r ui-test:run",
+		"prepare": "husky install",
+		"docker:m1": "docker-compose -f docker-compose.m1.yml up -d",
+		"turbo": "turbo"
+	},
+	"dependencies": {
+		"@graphql-codegen/add": "3.1.1",
+		"@graphql-codegen/cli": "2.6.2",
+		"@graphql-codegen/client-preset": "1.0.5",
+		"@graphql-codegen/introspection": "2.1.1",
+		"@graphql-codegen/near-operation-file-preset": "2.2.8",
+		"@graphql-codegen/typescript": "2.4.7",
+		"@graphql-codegen/typescript-graphql-request": "4.5.6",
+		"@graphql-codegen/typescript-operations": "2.3.4",
+		"@graphql-codegen/typescript-react-query": "3.5.7",
+		"@graphql-codegen/typescript-resolvers": "2.5.4",
+		"@graphql-codegen/typescript-type-graphql": "2.2.8",
+		"graphql": "15.8.0",
+		"typescript": "4.5.2"
+	},
+	"devDependencies": {
+		"@sd/eslint-config-superdao": "workspace:*",
+		"cross-env": "7.0.3",
+		"danger": "11.1.4",
+		"eslint": "8.24.0",
+		"husky": "7.0.4",
+		"junit-report-merger": "4.0.0",
+		"lint-staged": "12.5.0",
+		"prettier": "2.7.1",
+		"prettier-plugin-tailwindcss": "0.1.13",
+		"turbo": "1.7.4"
+	},
+	"pnpm": {
+		"overrides": {
+			"eth-sig-util@^1.4.2>ethereumjs-abi": "0.6.8"
+		}
+	}
+}

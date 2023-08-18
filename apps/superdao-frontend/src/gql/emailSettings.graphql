@@ -1,0 +1,34 @@
+mutation SendEmailVerificationMessage($sendEmailVerificationMessageInput: SendEmailVerificationMessageInput!) {
+	sendEmailVerificationMessage(sendEmailVerificationMessageInput: $sendEmailVerificationMessageInput) {
+		nextAttemptToSendEmail
+		error
+	}
+}
+
+mutation UpdateUserEmail($updateUserEmailInput: UpdateUserEmailInput!) {
+	updateUserEmail(updateUserEmailInput: $updateUserEmailInput) {
+		nextAttemptToSendEmail
+		error
+	}
+}
+
+mutation RemoveUserEmail {
+	removeUserEmail
+}
+
+query CheckUserOTPEmailResponse {
+	checkUserOTPEmailResponse {
+		resendTimestamp
+		otpTimestamp
+	}
+}
+
+mutation ResetUserOTPAndEmail {
+	resetUserOTPAndEmail
+}
+
+mutation ValidateUserOTPEmailResponse($validateUserOTPEmailInput: ValidateUserOTPEmailInput!) {
+	validateUserOTPEmailResponse(validateUserOTPEmailInput: $validateUserOTPEmailInput) {
+		status
+	}
+}

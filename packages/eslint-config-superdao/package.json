@@ -1,0 +1,29 @@
+{
+	"name": "@sd/eslint-config-superdao",
+	"main": "index.js",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "https://gitlab.superdao.co/dev/common/app",
+		"directory": "packages/eslint-config-superdao"
+	},
+	"devDependencies": {
+		"@emotion/eslint-plugin": "11.10.0",
+		"@typescript-eslint/eslint-plugin": "5.43.0",
+		"@typescript-eslint/parser": "5.43.0",
+		"eslint": "8.27.0",
+		"eslint-config-airbnb": "19.0.4",
+		"eslint-config-next": "13.0.3",
+		"eslint-config-prettier": "8.5.0",
+		"eslint-import-resolver-typescript": "3.5.2",
+		"eslint-plugin-codeceptjs": "1.3.0",
+		"eslint-plugin-import": "2.26.0",
+		"eslint-plugin-jsx-a11y": "6.6.1",
+		"eslint-plugin-lodash": "7.4.0",
+		"eslint-plugin-prettier": "4.2.1",
+		"eslint-plugin-react": "7.31.10",
+		"eslint-plugin-react-hooks": "4.6.0",
+		"eslint-plugin-turbo": "0.0.4",
+		"eslint-plugin-unused-imports": "2.0.0"
+	}
+}

@@ -1,0 +1,73 @@
+fragment PublicUser on User {
+	id
+	avatar
+	cover
+	walletAddress
+	walletType
+	ens
+	nonce
+	displayName
+	slug
+	bio
+	email
+	emailVerified
+	links {
+		site
+		discord
+		twitter
+		telegram
+		instagram
+	}
+	hasBetaAccess
+	isSupervisor
+	hasCookieDecision
+}
+
+query CurrentUser {
+	currentUser {
+		...PublicUser
+		createdAt
+	}
+}
+
+query UserBySlug($userslug: String!) {
+	userBySlug(userslug: $userslug) {
+		...PublicUser
+	}
+}
+
+query UserById($id: String!) {
+	userById(id: $id) {
+		...PublicUser
+	}
+}
+
+query HasCookieDecision {
+	hasCookieDecision
+}
+
+query allUsers($limit: Int = 20, $offset: Int = 0, $search: String = "") {
+	allUsers(limit: $limit, offset: $offset, search: $search) {
+		count
+		items {
+			...PublicUser
+		}
+	}
+}
+
+mutation UpdateUser($updateUserData: UpdateUserInput!) {
+	updateUser(updateUserData: $updateUserData) {
+		...PublicUser,
+		createdAt
+	}
+}
+
+mutation JoinBeta {
+	joinBeta {
+		...PublicUser
+	}
+}
+
+mutation DecideAboutCookies($decision: Boolean!) {
+	decideAboutCookies(decision: $decision)
+}

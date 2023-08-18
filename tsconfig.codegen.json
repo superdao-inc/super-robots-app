@@ -1,0 +1,8 @@
+{
+	"extends": "./apps/superdao-backend/tsconfig.json",
+	"paths": {
+		"src/*": [
+			"./apps/superdao-backend/src/*"
+		]
+	}
+}

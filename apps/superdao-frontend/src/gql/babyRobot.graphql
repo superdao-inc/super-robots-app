@@ -1,0 +1,248 @@
+fragment PublicScoringAudienceItem on ScoringAudienceItem {
+	wallet
+	score
+	tags
+	nftsCount
+	walletUsdCap
+	ens
+	twitterUrl
+	twitterUsername
+	twitterAvatarUrl
+	twitterFollowersCount
+}
+
+fragment PublicCustomItem on CustomItem {
+	layerName
+	layerType
+}
+
+query MintedBabyRobotByUser($userId: String!) {
+	mintedBabyRobotByUser(userId: $userId) {
+		id
+		createdAt
+	}
+}
+
+query MintedBabyRobotByCurrentUser {
+	mintedBabyRobotByCurrentUser {
+		id
+		status
+		tokenId
+		createdAt
+	}
+}
+
+query IsUserEligibleForMint {
+	isUserEligibleForMint {
+		status
+	}
+}
+
+query MintedBabyRobotInfoWithImageMetaByWallet($walletAddress: String!) {
+	mintedBabyRobotInfoWithImageMetaByWallet(walletAddress: $walletAddress) {
+		imageUrl
+		imageName
+		isImageInStorage
+		propertyTraits {
+			trait_type
+			value
+		}
+		statTraits {
+			display_type
+			trait_type
+			value
+		}
+	}
+}
+
+query MintedBabyRobotInfoWithImageMetaAndOwnerByTokenId($tokenId: String!) {
+	mintedBabyRobotInfoWithImageMetaAndOwnerByTokenId(tokenId: $tokenId) {
+		imageUrl
+		imageName
+		imageNameSha
+		owner
+		isImageInStorage
+		propertyTraits {
+			trait_type
+			value
+		}
+		statTraits {
+			display_type
+			trait_type
+			value
+		}
+	}
+}
+
+query WalletScoringData($walletAddress: String!) {
+	walletScoringData(walletAddress: $walletAddress) {
+		...PublicScoringAudienceItem
+	}
+}
+
+query BabyRobotsMintCount {
+	babyRobotsMintCount {
+		count
+	}
+}
+
+mutation WaitlistBabyRobot {
+	waitlistBabyRobot {
+		status
+	}
+}
+
+mutation MintBabyRobot($interests: [String!]!) {
+	mintBabyRobot(interests: $interests) {
+		status
+	}
+}
+
+mutation MintBabyRobotByCode($code: String!) {
+	mintBabyRobotByCode(code: $code) {
+		status
+	}
+}
+
+mutation ValidateCanMintBabyRobot {
+	validateCanMintBabyRobot {
+		status
+	}
+}
+
+query UserRobotsTokenIds {
+	userRobotsTokenIds
+}
+
+mutation GetUserRobotsTokenIds {
+	getUserRobotsTokenIds
+}
+
+query IsUserRobotTokenOwner($tokenId: String!) {
+	isUserRobotTokenOwner(tokenId: $tokenId)
+}
+
+query IsUserRobotTokenOwnerOrMinter {
+	isUserRobotTokenOwnerOrMinter
+}
+
+query MintedBabyRobotInfo {
+	mintedBabyRobotInfo {
+		imageName
+		propertyTraits {
+			trait_type
+			value
+		}
+		statTraits {
+			display_type
+			trait_type
+			value
+		}
+	}
+}
+
+query MintedBabyRobotInfoByTokenId($tokenId: String!) {
+	mintedBabyRobotInfoByTokenId(tokenId: $tokenId) {
+		imageName
+		propertyTraits {
+			trait_type
+			value
+		}
+		statTraits {
+			display_type
+			trait_type
+			value
+		}
+	}
+}
+
+query UserRobotMintIsInProgress {
+	userRobotMintIsInProgress
+}
+
+query RobotAssetsMapping {
+	robotAssetsMapping {
+		BG {
+			path
+			translation
+		}
+		TUBES {
+			path
+			translation	
+		}
+		EYES {
+			path
+			translation
+		}
+		LEGS {
+			path
+			translation
+		}
+		BODY {
+			path
+			translation
+		}
+	}
+}
+
+mutation UpdateRobotLayers($updateRobotLayersRequest: UpdateRobotLayersRequest!) {
+	updateRobotLayers(updateRobotLayersRequest: $updateRobotLayersRequest) {
+		status
+	}
+}
+
+query UsersInvitedByCurrentUserCode($limit: Int = 100, $offset: Int = 0) {
+	usersInvitedByCurrentUserCode(limit: $limit, offset: $offset)  {
+		items {
+			id
+			walletAddress
+			tokenId
+		}
+		count
+	}
+}
+
+query IsRobotUpdating($tokenId: String!) {
+	isRobotUpdating(tokenId: $tokenId) {
+		status
+	}
+}
+
+query RobotTokenOwner($tokenId: String!) {
+	robotTokenOwner(tokenId: $tokenId) {
+		owner
+	}
+}
+
+mutation GetRobotTokenOwner($tokenId: String!) {
+	getRobotTokenOwner(tokenId: $tokenId) {
+		owner
+	}
+}
+
+query UserEligibleForCustomizeData {
+	userEligibleForCustomizeData {
+		maxActivationsCount
+		usedActivationsCount
+		isUserEligibleForInvites
+	}
+}
+
+query GetUserCustomItems {
+	getUserCustomItems {
+		id
+		customItem {
+			...PublicCustomItem
+		}
+	}
+}
+
+query GetTokenCustomItems($tokenId: String!) {
+	getTokenCustomItems(tokenId: $tokenId) {
+		id
+		isEnabled
+		customItem {
+			...PublicCustomItem
+		}
+	}
+}
