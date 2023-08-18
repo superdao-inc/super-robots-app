@@ -1,0 +1,15 @@
+query GetIsStatisticClickCustomizeRegistered {
+	getIsStatisticClickCustomizeRegistered
+}
+
+mutation SaveStatisticClickCustomize {
+	saveStatisticClickCustomize
+}
+
+query GetIsStatisticClickNotifyMeRegistered {
+	getIsStatisticClickNotifyMeRegistered
+}
+
+mutation SaveStatisticClickNotifyMe {
+	saveStatisticClickNotifyMe
+}

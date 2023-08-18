@@ -1,0 +1,73 @@
+.idea
+.fleet
+
+# dependencies
+node_modules
+/.pnp
+.pnp.js
+.devops/app/charts
+.devops/app/Chart.lock
+# testing
+/coverage
+
+# build
+.turbo
+dist
+.pnpm-store
+
+# sql requests for testing purpose
+*.test.sql
+
+# production
+/build
+/current_build
+release.tar.gz
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+# Sentry
+.sentryclirc
+
+# eslint
+.eslintcache
+
+# next.js cache
+.next
+
+# unit tests
+junit.xml
+/apps/**/junit.xml
+
+# ui tests
+/apps/superdao-ui-tests/src/output/
+/apps/superdao-ui-tests/mochawesome-report
+/apps/superdao-ui-tests/src/files/generated/
+
+types.generated.ts
+**/gql/*.generated.ts
+
+.helm/charts
+.helm/Chart.lock
+
+deploy.env

@@ -1,0 +1,2 @@
+export const CHOICE_CONTENT_MAX_LENGTH = 255;
+export const PROPOSAL_TITLE_MAX_LENGTH = 1000;

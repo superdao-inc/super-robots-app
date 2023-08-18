@@ -1,0 +1,3 @@
+export const MAX_DECIMAL_TAIL_IN_MATIC_PRICE = 3;
+export const MIN_VISIBLE_TOKEN_AMOUNT = 0.00001;
+export const MIN_VISIBLE_USD_AMOUNT = 0.01;

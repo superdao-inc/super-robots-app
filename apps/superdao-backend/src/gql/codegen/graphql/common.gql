@@ -1,0 +1,309 @@
+# DAO
+fragment GraphDao on Dao {
+    id
+    controller {
+      id
+    }
+    collection {
+      id
+    }
+    openSale {
+      id
+    }
+    privateSale {
+      id
+    }
+    treasury
+    safes
+}
+
+query getGraphDao($id: ID!) {
+	dao(id: $id) {
+		...GraphDao
+	}
+}
+
+query getGraphDaos($first: Int, $skip: Int, $orderBy: Dao_orderBy, $where: Dao_filter) {
+	daos(first: $first, skip: $skip, orderBy: $orderBy, where: $where) {
+		...GraphDao
+	}
+}
+
+# CONTROLLER
+fragment GraphController on Controller {
+    id
+    admins {
+        id
+        user {
+            id
+        }
+    }
+}
+
+query getGraphController($id: ID!) {
+	controller(id: $id) {
+		...GraphController
+	}
+}
+
+query getGraphControllers($first: Int, $skip: Int, $orderBy: Controller_orderBy, $where: Controller_filter) {
+	controllers(first: $first, skip: $skip, orderBy: $orderBy, where: $where) {
+		...GraphController
+	}
+}
+
+# Collection
+fragment GraphAttribute on Attribute {
+    id
+    key
+    value
+    propertyKey
+    propertyValue
+}
+
+fragment GraphTierNft on Nft {
+    id
+    tokenID
+    artworkID
+    transferredAt
+    tier {
+        nativeID
+    }
+    owner { 
+        id
+    }
+    collection {
+        id
+    }
+}
+
+fragment GraphTier on Tier {
+    id
+    name
+    nativeID
+    attributes {
+        ...GraphAttribute
+    }
+    Nfts {
+        ...GraphTierNft  # ...GraphNft TODO maybe use GraphNft fragment
+    }
+}
+
+fragment GraphNft on Nft {
+    id
+    tokenID
+    artworkID
+    transferredAt
+    tier {
+        ...GraphTier
+    }
+    owner {
+        id
+    }
+    collection {
+        id
+    }
+}
+
+fragment GraphCollection on Collection {
+    id
+    isNative
+    name
+    symbol
+    url
+    openseaOwner
+    nfts {
+        ...GraphNft
+    }
+    tiers {
+        ...GraphTier
+    }
+}
+
+query getGraphCollection($id: ID!) {
+	collection(id: $id) {
+		...GraphCollection
+	}
+}
+
+query getGraphCollections($first: Int, $skip: Int, $orderBy: Collection_orderBy, $where: Collection_filter) {
+	collections(first: $first, skip: $skip, orderBy: $orderBy, where: $where) {
+		...GraphCollection
+	}
+}
+
+# Dao Collection
+query getGraphDaoCollection($daoId: ID!) {
+    dao(id: $daoId) {
+        collection {
+            ...GraphCollection
+        }
+    }
+}
+
+query getGraphDaoCollectionNfts($daoId: ID!, $first: Int) {
+    dao(id: $daoId) {
+        collection {
+            nfts(first: $first) {
+                ...GraphNft
+            }
+        }
+    }
+}
+
+query getGraphDaoCollectionOwnerNfts($daoId: ID!, $ownerId: ID!) {
+    dao(id: $daoId) {
+        collection {
+            nfts(where: {owner_: {id:  $ownerId }}) {
+                ...GraphNft
+            }
+        }
+    }
+}
+
+query getGraphDaoCollectionOwners($daoId: ID!) {
+    dao(id: $daoId) {
+        collection {
+          id
+          nfts {
+            owner {
+              id
+              nfts {
+                ...GraphNft
+              }
+            }
+          }
+          tiers {
+            ...GraphTier
+          }
+        }
+    }
+}
+
+
+# Admin option
+fragment GraphAdminOption on AdminOption {
+    id
+    user {
+        id
+    }
+    controller {
+        id
+    }
+}
+
+query getGraphAdminOption($id: ID!) {
+	adminOption(id: $id) {
+		...GraphAdminOption
+	}
+}
+
+query getGraphAdminOptions($first: Int, $skip: Int, $orderBy: AdminOption_orderBy, $where: AdminOption_filter) {
+    adminOptions(first: $first, skip: $skip, orderBy: $orderBy, where: $where) {
+		...GraphAdminOption
+	}
+}
+
+# User
+fragment GraphUser on User {
+    id
+    nfts {
+       ...GraphNft 
+    }
+    adminOf {
+        ...GraphAdminOption
+    }
+}
+
+query getGraphUser($id: ID!) {
+	user(id: $id) {
+		...GraphUser
+	}
+}
+
+query getGraphUsers($first: Int, $skip: Int, $orderBy: User_orderBy, $where: User_filter) {
+    users(first: $first, skip: $skip, orderBy: $orderBy, where: $where) {
+		...GraphUser
+	}
+}
+
+# Nft
+query getGraphNft($id: ID!) {
+	nft(id: $id) {
+		...GraphNft
+	}
+}
+
+query getGraphNfts($first: Int, $skip: Int, $orderBy: Nft_orderBy, $where: Nft_filter) {
+    nfts(first: $first, skip: $skip, orderBy: $orderBy, where: $where) {
+		...GraphNft
+	}
+}
+
+# Tier
+query getGraphTier($id: ID!) {
+	tier(id: $id) {
+		...GraphTier
+	}
+}
+
+query getGraphTiers($first: Int, $skip: Int, $orderBy: Tier_orderBy, $where: Tier_filter) {
+    tiers(first: $first, skip: $skip, orderBy: $orderBy, where: $where) {
+		...GraphTier
+	}
+}
+
+# Attribute
+query getGraphAttribute($id: ID!) {
+	attribute(id: $id) {
+		...GraphAttribute
+	}
+}
+
+query getGraphAttributes($first: Int, $skip: Int, $orderBy: Attribute_orderBy, $where: Attribute_filter) {
+    attributes(first: $first, skip: $skip, orderBy: $orderBy, where: $where) {
+		...GraphAttribute
+	}
+}
+
+# Open sale app
+fragment GraphOpenSaleApp on OpenSaleApp {
+    id
+    isNative
+    isActive
+    tierIds
+    tierPrices
+}
+
+query getGraphOpenSaleApp($id: ID!) {
+	openSaleApp(id: $id) {
+		...GraphOpenSaleApp
+	}
+}
+
+query getGraphOpenSaleApps($first: Int, $skip: Int, $orderBy: OpenSaleApp_orderBy, $where: OpenSaleApp_filter) {
+    openSaleApps(first: $first, skip: $skip, orderBy: $orderBy, where: $where) {
+		...GraphOpenSaleApp
+	}
+}
+
+# Private sale app
+fragment GraphPrivateSaleApp on PrivateSaleApp {
+    id
+    isNative
+    isActive
+    tierIds
+    tierPrices
+}
+
+query getGraphPrivateSaleApp($id: ID!) {
+	privateSaleApp(id: $id) {
+		...GraphPrivateSaleApp
+	}
+}
+
+query getGraphPrivateSaleApps($first: Int, $skip: Int, $orderBy: PrivateSaleApp_orderBy, $where: PrivateSaleApp_filter) {
+    privateSaleApps(first: $first, skip: $skip, orderBy: $orderBy, where: $where) {
+		...GraphPrivateSaleApp
+	}
+}

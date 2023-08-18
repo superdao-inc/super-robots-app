@@ -1,0 +1,2531 @@
+{
+	"cookie": {
+		"text": "We use cookies to personalize your site experience and analyze the site traffic",
+		"error": "Oops! Something went wrong"
+	},
+	"sharing": {
+		"twitter": {
+			"mint": "Hey, just minted my new NFT from {{daoName}} on @superdao_co 🤩\nCheck it out {{targetNftUrl}}",
+			"found": "Hey, just found this NFT from {{daoName}} on @superdao_co 🤩\nCheck it out {{targetNftUrl}}",
+			"dao": "Look at {{daoName}} DAO on @superdao_co 🤩",
+			"referral": "{{daoName}} opens a limited membership giveaway! Join our community right now with a free NFT! Use this link to get one"
+		}
+	},
+	"meta": {
+		"title": "Superdao",
+		"description": "Superdao"
+	},
+	"actions": {
+		"labels": {
+			"edit": "Edit",
+			"save": "Save",
+			"share": "Share",
+			"backToHome": "Back to home",
+			"skip": "Skip",
+			"set": "Set",
+			"saveChanges": "Save changes",
+			"submit": "Submit",
+			"cancel": "Cancel",
+			"publish": "Publish",
+			"editAndPublish": "Edit and publish",
+			"preview": "Preview",
+			"exit": "Exit",
+			"delete": "Delete",
+			"leave": "Leave",
+			"remove": "Remove",
+			"comment": "Comment",
+			"copy": "Copy",
+			"clickToCopy": "Click to copy",
+			"create": "Create",
+			"copyNftId": "Copy NFT ID",
+			"viewOpensea": "View on Opensea",
+			"continue": "Continue",
+			"goto": "Go to",
+			"connect": "Connect wallet",
+			"login": "Login to Superdao",
+			"from": " from ",
+			"done": "Done",
+			"hide": "Hide",
+			"support": "Support",
+			"selectAll": "Select all",
+			"sendMax": "Send max",
+			"send": "Send",
+			"retry": "Retry",
+			"decline": "Decline",
+			"accept": "Accept",
+			"contactUs": "Contact us",
+			"seeAll": "See all",
+			"signIn": "Sign in",
+			"filter": "Filter",
+			"clearAll": "Clear all",
+			"getNft": "Get NFT",
+			"freeMint": "Free mint",
+			"next": "Next",
+			"claimAll": "Claim all",
+			"claimRewards": "Claim rewards",
+			"viewInProfile": "View in profile",
+			"selectManually": "Select manually",
+			"changeWallet": "Change wallet",
+			"gotIt": "Got it",
+			"mintForFree": "Mint for free",
+			"change": "Change"
+		},
+		"confirmations": {
+			"copy": "Copied",
+			"linkCopy": "Link copied",
+			"addressCopy": "Address copied",
+			"nftIdCopy": "NFT ID copied",
+			"allNftIdCopy": "All NFT IDs copied",
+			"changesWillBeLost": "Are you sure you want to leave this page? The changes you made will be lost",
+			"configurationCopy": "Configuration copied"
+		}
+	},
+	"errors": {
+		"unknownError": "Unknown error",
+		"unknownServerError": "Unknown server error",
+		"anErrorOccured": "An error occured. Code {{sentryEventId}}",
+		"unknownTokenId": "Unknown token ID",
+		"unknownContractTokenId": "Unknown contract token ID",
+		"unknownContractTokenParams": "Unknown contract token address and decimals",
+		"requiredToTokenAmount": "Unknown target price",
+		"walletAddressMissing": "Wallet address is missing",
+		"invalidPriceCalculation": "The nft price couldn't be calculated",
+		"noProvider": "No provider",
+		"noProviderRelogin": "No provider. Please re-login",
+		"metamask": {
+			"4001": "You have rejected the transaction signing",
+			"4902": "The requested chain isn't added to MetaMask",
+			"32603": "Please make sure that correct chain is selected in your MetaMask wallet. You can add Polygon to your wallet by visiting https://polygonscan.com/. Recommended RPC url is https://polygon-rpc.com/"
+		},
+		"contract": {
+			"INITIALIZATION": "The contract was not initialized correctly",
+			"AUTHORIZATION": "Unknown error when accessing a contract",
+			"INVARIANT": "You do not have access to this contract method",
+			"VALIDATION": "Unknown error when accessing a contract",
+			"UNAVAILABLE": "Sale is not available",
+			"NOT_ACTIVE": "This contract functionality is currently disabled",
+			"NO_TREASURY_ADDRESS": "DAO that owns this contract does not have a treasury wallet specified",
+			"APP_WAS_INITED": "Unknown error when accessing a contract",
+			"ADDRESS_ASSOCIATES_WITH_APP": "Unknown error when accessing a contract",
+			"BUY_LIMIT_ERROR": "You have reached the buy limit for the selected NFT",
+			"NULL_STABLECOIN_ADDRESS": "Unknown error when accessing a contract",
+			"UNSUPPORTED_TOKEN_ADDRESS": "The specified payment type is not supported in the contract",
+			"NOT_FOUND_PRICE_FOR_TIER": "The price for the selected tier is not specified in the contract",
+			"INSUFFICIENT_AMOUNTS_OF_FUNDS": "There are not enough funds to complete the operation",
+			"INSUFFICIENT_ALLOWANCE": "Access to funds to perform the operation is not allowed",
+			"BASIC_TOKEN_ADDRESS_NOT_SET": "Unknown error when accessing a contract"
+		},
+		"validation": {
+			"slug": "This public username is not available. Try another one"
+		}
+	},
+	"roles": {
+		"creator": "Creator",
+		"admin": "Admin",
+		"member": "Member"
+	},
+	"walletTransaction": {
+		"type": {
+			"RECEIVE": "receive",
+			"SEND": "send",
+			"EXECUTION": "contract execution",
+			"SELL": "sell",
+			"TRANSFER": "transfer",
+			"SAFE_SETUP": "safe creation",
+			"RECEIVE_NFT": "receive NFT",
+			"SEND_NFT": "send NFT"
+		}
+	},
+	"treasuryWallet": {
+		"type": {
+			"EXTERNAL": "Private wallet",
+			"SAFE": "Gnosis Safe"
+		}
+	},
+	"pages": {
+		"nftReward": {
+			"claimed": "Claimed",
+			"claiming": "NFT delivery pending"
+		},
+		"mobile": {
+			"title": "Open this link on the desktop",
+			"description": "You can only work with your DAO on a PC. To continue, please paste this link to your desktop browser",
+			"supportText": "If you have any difficulties, ",
+			"supportLink": "contact us"
+		},
+		"login": {
+			"title": "Connect wallet",
+			"emailInput": {
+				"placeholder": "Email"
+			},
+			"footer": {
+				"terms": "Terms of Use",
+				"and": "and",
+				"privacy": "Privacy Policy"
+			},
+			"btn": {
+				"continue": "Continue with email",
+				"continueWithWallet": "Continue with wallet",
+				"continueWithSocial": "Continue with social"
+			},
+			"emailWaiting": {
+				"title": "Check your email",
+				"description": "Use the code we sent to <1>{{email}}</1><2></2> to sign in. <4>Don’t close this page!</4>"
+			},
+			"socialWaiting": {
+				"title": "Login with {{provider}}",
+				"description": "Please wait"
+			},
+			"or": "or",
+			"wallets": {
+				"metamask": "Metamask",
+				"walletConnect": "WalletConnect"
+			},
+			"caption": {
+				"walletCreation": "Superdao Wallet will be created if the email or social option is selected.",
+				"hint": "How to create your own wallet?"
+			},
+			"useMetamask": "Please sign in with Metamask or WalletConnect to use this account",
+			"noMetamask": "No Metamask wallet. Please use WalletConnect instead",
+			"signingToast": "Please go to your wallet to sign the transaction",
+			"error": "Oops! Something went wrong"
+		},
+		"feed": {
+			"title": "Feed",
+			"postingSuggestion": "Write a post..."
+		},
+		"createDao": {
+			"infoTitle": "General info",
+			"linksTitle": "Links",
+			"docsTitle": "Docs",
+			"contractTitle": "Smart contract",
+			"contractStep": {
+				"title": "Demo smart contract",
+				"description": "Your DAO will be launched on the blockchain and you can play around with demo NFT collection. Our team of experts will help you to customize the contract."
+			},
+			"backLabel": "Back",
+			"createLabel": "Create DAO"
+		},
+		"editDao": {
+			"title": "Settings"
+		},
+		"editNfts": {
+			"title": {
+				"collection": "Customize NFTs",
+				"publicSale": "Public sale",
+				"privateSale": "Private sale"
+			},
+			"tabs": {
+				"collection": "Customize NFTs",
+				"publicSale": "Public sale",
+				"privateSale": "Private sale"
+			},
+			"collection": {
+				"subtitleText": "Need help customizing your collection? Look at our <0>guide</0> or <1>contact support</1>",
+				"collectionBlockTitle": "Customize collection",
+				"name": {
+					"label": "Name",
+					"placeholder": "Name your collection"
+				},
+				"symbol": {
+					"label": "Symbol",
+					"description": "Generated after you fill in the name field",
+					"placeholder": "Like $ETH for Ethereum"
+				},
+				"url": {
+					"label": "URL",
+					"description": "Will be shown on NFT marketplaces",
+					"placeholder": "Public link to your project"
+				},
+				"description": {
+					"label": "Description",
+					"description": "A brief summary of what this NFT collection is about",
+					"placeholder": "Write a few words about your collection",
+					"helper": "Why do I need to describe a collection? <0>Learn more</0>"
+				},
+				"tiers": {
+					"title": "Tiers",
+					"text": "Tiers are different kinds of your NFTs: each one of them can have different artworks, quantity, price and transferability rules",
+					"addButton": "Add tier",
+					"deactivatedTierLabel": "(Deactivated)",
+					"removeModal": {
+						"titleDeleting": "Delete tier?",
+						"textDeleting": "Information about the Tier will be deleted from the blockchain",
+						"confirmDeleting": "Delete",
+						"titleDeactivating": "Deactivate tier?",
+						"textDeactivating_one": "This tier will be deactivated. {{count}} minted NFT will remain active. <0>Learn more</0>",
+						"textDeactivating_other": "This tier will be deactivated. {{count}} minted NFTs will remain active. <0>Learn more</0>",
+						"confirmDeactivating": "Deactivate"
+					}
+				},
+				"achievements": {
+					"typeTitle": "NFT type",
+					"xpTitle": "XP",
+					"labelsTitle": "Achievement labels",
+					"labelsPlaceholder": "e.g. Mission completed",
+					"labelAddBtn": "Add achievement label"
+				},
+				"benefits": {
+					"title": "Benefits",
+					"info": "Choose any additional benefits you want to give to the owners of this token",
+					"placeholder": "e.g. Discord access, Private beta",
+					"benefitAddBtn": "Add a new benefit"
+				},
+				"properties": {
+					"title": "Properties",
+					"info": "Add custom NFT properties. They will be displayed in the NFT marketplaces",
+					"keyPlaceholder": "e.g. Season",
+					"valuePlaceholder": "e.g. Genesis",
+					"propertyAddBtn": "Add a new property"
+				},
+				"save": "Save",
+				"successUpdateToast": "Collection updated. The DAO page will update in 5 minutes"
+			},
+			"sale": {
+				"noTiers": {
+					"title": "No tiers for sale",
+					"subtitle": "Add a tier to start sale",
+					"button": "Add tier"
+				},
+				"title": "Start the sale",
+				"subtitleText": "Need help launching a sale? Look at our <0>guide</0> or <1>contact support</1>",
+				"state": {
+					"enabled": "Sale turned on",
+					"disabled": "Sale turned off"
+				},
+				"tier": {
+					"title": "Tier {{index}} - {{name}}",
+					"pretext": "of",
+					"type": {
+						"one": "Single artwork",
+						"random": "Random artwork",
+						"reveal": "Reveal",
+						"unique": "Unique"
+					},
+					"price": {
+						"label": "Price",
+						"placeholder": "Enter a price",
+						"error": "Price must be set",
+						"errorMaxValue": "The price cannot be greater than 1 000 000 000",
+						"errorMinValue": "The price cannot be less than 0"
+					},
+					"include": "Included in the sale",
+					"tierLimits": {
+						"label": "Limit",
+						"placeholder": "Enter a limit",
+						"error": "Limit must be set",
+						"errorMaxValue": "The limit cannot be greater than {{max}}",
+						"errorMinValue": "The price cannot be less than {{min}}"
+					}
+				},
+				"save": "Save",
+				"treasuryWallet": {
+					"label": "Sale wallet",
+					"placeholder": "Enter wallet address",
+					"error": "Invalid address",
+					"description": "Revenues from public and private NFT sales will be allocated to this wallet"
+				},
+				"token": {
+					"label": "Token"
+				},
+				"claimLimit": {
+					"label": "Claim limit (per wallet)",
+					"placeholder": "Enter claim limit number"
+				},
+				"totalClaimsLimit": {
+					"label": "Total claims limit (per sale)",
+					"placeholder": "Enter total claims limit number"
+				},
+				"timeStart": {
+					"label": "Sale start time",
+					"placeholder": "Select date and time",
+					"dateMinError": "Should be greater than today or start time"
+				},
+				"timeEnd": {
+					"label": "Sale end time",
+					"placeholder": "Select date and time",
+					"dateMinError": "Should be greater than today",
+					"checkboxLabel": "Has end time"
+				}
+			}
+		},
+		"email": {
+			"verification": {
+				"navigate": "Go to homepage",
+				"success": {
+					"title": "New email confirmed",
+					"decription": "Your primary email has been changed to"
+				},
+				"expired": {
+					"title": "Link has been expired",
+					"decription": "Please try again"
+				},
+				"modal": {
+					"title": "Verify your email",
+					"body": "We will need your email for communication",
+					"verify": "Continue",
+					"checkEmailTitle": "Check your email",
+					"checkEmailFirstParagraph": "We sent the verification link to <0>{{email}}</0>.",
+					"checkEmailSecondParagraph": "Please check your inbox",
+					"error": "Something went wrong. Please try again later",
+					"invalidEmail": "Invalid email",
+					"resend": "Resend email"
+				}
+			}
+		},
+		"dao": {
+			"notification": {
+				"voting": {
+					"heading": "Your DAO is growing!",
+					"description": "Start voting to engaged your members",
+					"actions": {
+						"newProposal": "New proposal",
+						"howItWorks": "How it works?"
+					},
+					"modal": {
+						"heading": "Start voting",
+						"description": "This proposal, if passed, would issue 50,000 GTC for governance rights equating to 1,500,000 $WONDER tokens (1.5% of total supply) when Wonder’s token is live.",
+						"opportunities": {
+							"first": {
+								"heading": "Engage members",
+								"description": "In community activities"
+							},
+							"second": {
+								"heading": "Make decisions",
+								"description": "The majority agrees"
+							},
+							"third": {
+								"heading": "Grow community",
+								"description": "Units to hundreds"
+							}
+						},
+						"gotIt": "Got it"
+					}
+				}
+			},
+			"membersTitle": "Members",
+			"labels": {
+				"waitingConfirmation": "Wait for confirmation",
+				"waitingConfirmationTemp": "No contract",
+				"waitingConfirmationTooltip": "Your smart contract is loading. It can take up to 10 minutes."
+			},
+			"actions": {
+				"addDocs": "Add docs",
+				"settings": "Settings",
+				"edit": "Edit Profile",
+				"delete": "Delete DAO",
+				"leave": "Leave DAO",
+				"apply": "Apply to join"
+			},
+			"success": {
+				"joined": "Successfully joined. You’re the member of {{name}}",
+				"roleChanged": "Role for {{memberId}} has been changed"
+			},
+			"links": {
+				"contract": "Collection address",
+				"support": "Support"
+			},
+			"members": {
+				"actions": {
+					"copyAddress": "Copy address",
+					"delete": "Remove from DAO",
+					"inviteMembers": "Invite members",
+					"exportMembers": "Export CSV",
+					"addMembers": "Add members",
+					"copyLink": "Copy link",
+					"ban": "Ban member",
+					"remove": "Remove wallet",
+					"grantCreator": "Grant creator",
+					"revokeCreator": "Revoke creator",
+					"grantAdmin": "Grant admin",
+					"revokeAdmin": "Revoke admin",
+					"whitelistAdd": "Whitelist - Add manually",
+					"airdropAdd": "Airdrop - Add manually",
+					"addToWhitelist": "Add to whitelist",
+					"airdropToWhitelist": "Airdrop NFTs",
+					"search": "Name or wallet address",
+					"deactivateLink": "Deactivate link",
+					"activateLink": "Activate link"
+				},
+				"filter": {
+					"all": "All",
+					"admin": "Admin",
+					"member": "Member",
+					"whitelist": "Whitelist",
+					"email": "Email"
+				},
+				"columns": {
+					"member": "Member",
+					"role": "Role",
+					"tier": "Tier",
+					"walletAddress": "Wallet address",
+					"availableTier": "Available tier",
+					"email": "Email"
+				},
+				"rows": {
+					"notClaimed": "Not Claimed",
+					"linkDeactivated": "Link deactivated"
+				},
+				"notClaimed": "Not claimed"
+			},
+			"addMembersManually": {
+				"invalidEmail": "Invalid email",
+				"actions": {
+					"select": "Select a tier",
+					"addOneMore": "Add more",
+					"sendNft": "Send NFT"
+				},
+				"email": {
+					"notification": "Email (for notification)",
+					"claim": "Email (for claim)"
+				}
+			},
+			"modal": {
+				"deleteTitle": "Delete \"{{daoName}}\"?",
+				"deleteLabel": "All data will de deleted and it cannot be undone",
+				"leaveTitle": "Leave \"{{daoName}}\"?",
+				"leaveLabel": "You can rejoin it later",
+				"copyLinkTitle": "Invite members",
+				"copyLinkLabel": "Copy invitation link and send anybody"
+			},
+			"banModal": {
+				"title": "Ban {{userName}}?",
+				"description": "Their membership NFTs will burn",
+				"buttonBurnOnly": "Burn {{count}} NFTs",
+				"buttonBurnAndBan": "Burn {{count}} NFTs and ban",
+				"titleWhitelist": "Remove {{userName}}?",
+				"titleEmail": "Deactivate claim link for {{userName}}?",
+				"descriptionEmail": "The claim from this link will no longer be available",
+				"descriptionWhitelist": "Buying your DAO's NFT will no longer be available for this wallet",
+				"buttonWhitelist": "Remove wallet"
+			},
+			"nft": {
+				"header": {
+					"title": "Membership NFTs",
+					"customizeTooltip": "We've created you a demo collection. Start your journey by customizing it.",
+					"menu": {
+						"openOpensea": "View on Opensea"
+					}
+				},
+				"pendingTitle": "Please wait",
+				"pendingSubtitle": "Collection is creating...",
+				"sendNft": "Send NFT"
+			},
+			"showcase": {
+				"header": {
+					"title": "Showcase",
+					"menu": {
+						"customize": "Customize"
+					}
+				}
+			},
+			"createNftCollection": {
+				"mintLabel": "Mint on Polygon",
+				"description": {
+					"label1": "DAO Heroes",
+					"label2": "Each hero can be rewarded for different contribution"
+				}
+			}
+		},
+		"votingProposal": {
+			"heading": "Proposal details",
+			"showMore": "Show more",
+			"showLess": "Show less",
+			"delete": "Delete proposal",
+			"edit": "Edit proposal",
+			"create": "Create a proposal",
+			"upcoming": "Upcoming",
+			"pending": "Pending",
+			"active": "Active",
+			"closed": "Closed",
+			"createdBySuperdao": "Demo proposal",
+			"votingOptions": {
+				"yes": "Yes",
+				"no": "No",
+				"abstain": "Abstain"
+			},
+			"votingTypes": {
+				"singleChoice": "Single choice voting",
+				"multipleChoice": "Multiple choice voting",
+				"yesNoAbstain": "Single choice voting"
+			},
+			"votingPower": "Voting power = {{power}}",
+			"voting": {
+				"votes_one": "{{count}} vote",
+				"votes_other": "{{count}} votes",
+				"vote": "Vote",
+				"seeAll": "See all"
+			},
+			"votes": "Votes",
+			"toasts": {
+				"publish": "Proposal published",
+				"edit": "Proposal edited"
+			}
+		},
+		"voting": {
+			"title": "Voting"
+		},
+		"members": {
+			"title": "Members"
+		},
+		"admins": {
+			"title": "Admins"
+		},
+		"treasury": {
+			"title": "Treasury"
+		},
+		"achievements": {
+			"all": {
+				"title": "Achievements",
+				"achievementDetails": {
+					"title": "Achievement details"
+				}
+			},
+			"leaderboard": {
+				"title": "Leaderboard"
+			},
+			"levels": {
+				"title": "Roadmap",
+				"levelInfo_one": "level",
+				"levelInfo_other": "levels",
+				"levelInfo": {
+					"levelTitle": "Level",
+					"bonusesCount_one": "{{ count }} bonuse received",
+					"bonusesCount_other": "{{ count }} bonuses received",
+					"exp": "XP",
+					"roadmapTip": "☝️ More XP points you can get from ",
+					"roadmapTipLink": "Achievements page",
+					"lastLevelStub": "✨ Infinity is not a limit..."
+				}
+			},
+			"profile": {
+				"title": "My profile",
+				"userAchievements": {
+					"title": "My Achievements"
+				},
+				"levels": {
+					"title": "Roadmap",
+					"levelInfo": {
+						"level": "level",
+						"exp": "XP"
+					}
+				}
+			}
+		},
+		"myProfile": {
+			"levels": {
+				"title": "Roadmap",
+				"levelInfo": {
+					"level": "level",
+					"exp": "XP"
+				}
+			}
+		},
+		"importMembers": {
+			"whitelistHeading": "Whitelist - Import CSV",
+			"airdropHeading": "Airdrop - Import CSV",
+			"subHeading": "Need help with NFT airdrop? Check out our <0>guide</0> or <1>contact support</1>",
+			"whitelistSubHeading": "Need help with creating a whitelist? Check out our <0>guide</0> or <1>contact support</1>",
+			"continue": "Continue",
+			"notAssigned": "Not assigned",
+			"notSendNft": "Don’t send NFT",
+			"notAddToWhitelist": "Don’t add to whitelist",
+			"fileInfo": {
+				"heading": "Uploaded file",
+				"changeBtn": "Change CSV",
+				"uniqueCount": "{{uniqueCount}} ready to send",
+				"totalCount": "{{totalCount}} total lines",
+				"duplicatesTip": "Make sure no wallets in the file have already received an NFT"
+			},
+			"tiers": {
+				"importTierHeading": "Tier from CSV",
+				"assignAnNftTierHeading": "Assign NFT tier",
+				"importTierHeadingUniversal": "Tier from CSV and assign an NFT tier"
+			},
+			"send": "Send {{count}} NFTs",
+			"sendZero": "Send NFTs",
+			"addWallets": "Add {{count}} wallets",
+			"addWalletsZero": "Add wallets",
+			"modal": {
+				"heading": "Upload CSV file",
+				"description": "Please, follow the format:",
+				"description1": "NFTs will be airdroped directly to wallets.",
+				"description2": "For emails without wallets, a claim link will be sent",
+				"restriction": "Max 1000 lines",
+				"structure": "Wrong CSV format. Please edit the format and try again.",
+				"errorHint": "Show errors",
+				"back": "Back",
+				"downloadTemplate": "Download template",
+				"seeOurGuideLink": "Need help? See our guide",
+				"upload": "Upload",
+				"hasDuplicatedEmails": "Whitelist includes duplicated emails. Please remove duplicated emails and try again.",
+				"hasInvalidAddresses": "Whitelist include invalid addresses",
+				"duplicatedEmailsHeading": "The following emails are duplicated:",
+				"invalidAddressesHeading": "The following wallets are invalid",
+				"placeholder": "Select file",
+				"interlayer": {
+					"airdropHeading": "Airdrop",
+					"airdropDescription": "Send membership NFTs to wallets",
+					"airdropDescriptionWalletsOrEmails": "Send membership NFTs to wallets",
+					"whitelistHeading": "Add to whitelist",
+					"whitelistDescription": "Add wallets to let them buy membership NFT",
+					"emailAirdropHeading": "Airdrop",
+					"emailAirdropDescription": "Send membership NFTs to emails",
+					"importCsv": "Import CSV",
+					"importCsvDescription": "Upload a file to add multiple wallets",
+					"addManually": "Add manually",
+					"addManuallyDescription": "Insert each wallet address manually",
+					"emailAirdropImportCsv": "Import CSV",
+					"emailAirdropImportCsvDescription": "Upload a file to add multiple members emails",
+					"emailAirdropAddManually": "Add manually",
+					"emailAirdropAddManuallyDescription": "Insert each email address manually"
+				},
+				"errorsModal": {
+					"heading": "CSV errors",
+					"emailsHeading": "The following emails are duplicated",
+					"addressesHeading": "The following addresses are invalid",
+					"tierFiller": "*Not found*"
+				}
+			},
+			"tierMatcher": {
+				"notFoundTier": "Tier not found",
+				"walletsCount_one": "{{count}} member",
+				"walletsCount_other": "{{count}} members",
+				"unitsCount_one": "{{count}} unit",
+				"unitsCount_other": "{{count}} units",
+				"skipTitle": "Skip",
+				"skipWhitelistDescription": "Don’t add to whitelist",
+				"skipAirdropDescription": "Do not send NFT",
+				"addTitle": "Add to whitelist",
+				"addDescription": "Allow to buy NFT",
+				"error": "Number of wallets must not exceed the number of units. Please, change the tier or request for more units from Superdao team."
+			},
+			"duplicates": {
+				"headline": "There are duplicates in your CSV",
+				"check": "Check duplicates",
+				"download": "Download",
+				"remove": "Remove duplicate wallets",
+				"removeMembers": "Remove wallets that already hold NFTs of your DAO",
+				"allRemoved": "The whitelist is empty, all wallets were removed. Nothing to download"
+			}
+		},
+		"createNftCollection": {
+			"emptyTitle": "No collections to create",
+			"goBack": "Go back"
+		},
+		"editProfile": {
+			"title": "Edit profile"
+		},
+		"emailSettings": {
+			"title": "Email settings",
+			"emailStatus": {
+				"verified": "Verified",
+				"unverified": "Unverified"
+			},
+			"form": {
+				"email": {
+					"label": "Email",
+					"placeholder": "Enter your email"
+				},
+				"submitButton": "Save changes"
+			},
+			"removeEmail": {
+				"action": "Remove email",
+				"confirmation": {
+					"text": "Are you sure you want to\u00A0remove your email address?",
+					"action": "Remove",
+					"cancel": "Cancel"
+				}
+			},
+			"sendVerification": "Send verification email",
+			"resendVerification": "Resend verification email in"
+		},
+		"profileAbout": {
+			"title": "About",
+			"links": {
+				"whatIsSuperdao": "What is Superdao",
+				"jobs": "Jobs",
+				"terms": "Terms of Use",
+				"policy": "Privacy Policy"
+			}
+		},
+		"user": {
+			"nftList": {
+				"title": "NFTs"
+			},
+			"emptyNftList": {
+				"currentUser": {
+					"title": "You have not yet received any rewards",
+					"description": "Start right now with the available offers",
+					"goToRewards": "Go to rewards"
+				},
+				"commonUser": {
+					"title": "No rewards yet"
+				}
+			}
+		},
+		"userDaos": {
+			"title": "Memberships",
+			"errors": {
+				"notFound": "<span>{{name}}</span> don’t have any DAOs yet",
+				"currentUserNotFound": "You don’t have any DAOs yet"
+			}
+		},
+		"nft": {
+			"title": "{{name}} details",
+			"collection": "collection",
+			"available": "available",
+			"titleUserPage": "NFT details",
+			"send": "Send NFT",
+			"remove": "Remove",
+			"unit_one": "unit",
+			"unit_other": "units",
+			"details": {
+				"unit_one": "unit",
+				"unit_other": "units",
+				"creator": "Creator",
+				"owner": "Owner",
+				"openOpensea": "View on Opensea"
+			},
+			"notSent": "No owners yet",
+			"deactivated": {
+				"title": "This tier is deactivated",
+				"description": "Only admins of the DAO can see this page",
+				"btnDelete": "Delete tier",
+				"notAbleToDeleteModalTitle": "Unable to delete tier",
+				"notAbleToDeleteModalText": "You cannot delete this Tier, because there are DAO members holding this NFT. <0>Learn more</0>",
+				"gotIt": "Got it"
+			}
+		},
+		"claim": {
+			"nftClaiming": {
+				"heading": "Claim your NFT",
+				"isClaiming": "It takes about 2 minutes, don't close the page",
+				"getForFree": "Get for free",
+				"loading": "Minting your NFT, please do not close this page"
+			},
+			"emailNftClaiming": {
+				"heading": "Claim your NFT",
+				"isClaiming": "It takes about 2 minutes, don't close the page",
+				"emailClaimForFree": "Claim NFT",
+				"loading": "Minting your NFT, please do not close this page",
+				"processTitle": "Claiming NFT",
+				"processDescription": "Please do not close this page",
+				"alreadyTitle": "This NFT has already been claimed",
+				"alreadyDescription": "Someone already used this link to get an NFT.",
+				"alreadySupport": "If it wasn`t you, contact the admin of the DAO for support",
+				"alreadyBtn": "Support",
+				"deactivatedTitle": "This link was deactivated by the DAO",
+				"deactivatedDescription": "Please contact the DAO admin for support"
+			},
+			"success": {
+				"heading": "Minting successful",
+				"description": "You can now find this NFT in your profile.",
+				"subDescription": "Press continue to go to the DAO profile"
+			},
+			"modal": {
+				"notInWhitelist": {
+					"heading": "Your wallet is not eligible for buying this NFT",
+					"description": "Please try again with another wallet",
+					"back": "Back to DAO",
+					"action": "Change wallet"
+				},
+				"claimEnded": {
+					"heading": "No NFTs available",
+					"description": "Sorry, all the NFTs have been distributed and you can no longer get them",
+					"back": "Back to DAO profile"
+				},
+				"hasNft": {
+					"heading": "You already have this NFT",
+					"description": "You can find this NFT in your profile",
+					"back": "Enter DAO workspace"
+				},
+				"unknownError": {
+					"heading": "Oops, didn’t work",
+					"description": "Please go back and try again",
+					"back": "Back"
+				}
+			}
+		},
+		"checkout": {
+			"heading": "Checkout",
+			"continue": "Continue",
+			"back": "Back",
+			"pay": "Pay",
+			"choose": {
+				"heading": "Choose your currency",
+				"metaTitle": "Payment selection",
+				"description": "You can pay with tokens on Polygon or Ethereum",
+				"descriptionNoEthereum": "You can pay with tokens on Polygon",
+				"enough": "Enough funds",
+				"notEnough": "Not enough funds",
+				"fiat": {
+					"heading": "Pay with bank card",
+					"description": "Instantly buy NFT with your debit or credit card"
+				},
+				"gas": "gas",
+				"routeNotFound": "Route not found"
+			},
+			"nftCheckout": {
+				"heading": "Checkout",
+				"metaTitle": "NFT checkout",
+				"metaDescription": "NFT checkout on Superdao",
+				"email": {
+					"header": "Email (for notifications only)",
+					"placeholder": "Enter your email",
+					"error": {
+						"fillEmail": "Please enter your email address",
+						"invalidEmail": "Please enter a valid email address"
+					}
+				}
+			},
+			"modal": {
+				"whitelist": {
+					"heading": "Your wallet is not eligible for buying this NFT",
+					"description": "Please try again with another wallet"
+				},
+				"validations": {
+					"sale": {
+						"heading": "Collection is not available",
+						"description": "Sorry, the sale is currently not available for this collection"
+					},
+					"tier": {
+						"heading": "The selected NFT is unavailable",
+						"description": "Please go back to the previous page and select again"
+					},
+					"unknown": {
+						"heading": "Something went wrong",
+						"description": "Please go back to the previous page and try again"
+					},
+					"email": {
+						"heading": "Email was not provided or entered incorrectly",
+						"description": "Please go back to the previous page and enter again"
+					},
+					"payment": {
+						"heading": "The selected currency or chain not valid",
+						"description": "Please go back to the previous page and select again"
+					},
+					"limits": {
+						"heading": "Not available",
+						"description": "Sorry, all of the NFTs has already been minted"
+					}
+				},
+				"contractError": {
+					"heading": "Smart contract error"
+				},
+				"back": "Back"
+			},
+			"finish": {
+				"heading": "Payment",
+				"metaTitle": "NFT checkout finish",
+				"description": "We only accept payments on Polygon, so you'll need to transfer your tokens there. It's quick and easy, just follow the steps below",
+				"steps": {
+					"transfer": {
+						"header": "Transfer tokens to Polygon",
+						"description": "From Ethereum network to Polygon",
+						"action": "Transfer",
+						"actionHint": "It usually takes about 1 minute. Transaction amount should exceed ${{amount}}"
+					},
+					"switchToEthereum": {
+						"header": "Switch network",
+						"description": "You are a moment away from switching to Ethereum",
+						"action": "Switch to Ethereum"
+					},
+					"pay": {
+						"header": "Pay on Polygon",
+						"description": "Make the payment to complete",
+						"action": "Pay"
+					}
+				},
+				"minimumTransactionAmount": "Transaction amount should exceed ${{amount}}. The amount of the current transaction will be increased to this value"
+			},
+			"success": {
+				"heading": "Minting successful 🎉",
+				"metaTitle": "Checkout success",
+				"description": "This NFT will soon be displayed in your profile. Press Continue to enter the DAO"
+			}
+		},
+		"joinBeta": {
+			"authorized": {
+				"title": "Your secret link",
+				"description": "Join beta to create your DAO",
+				"button": "Join Beta"
+			},
+			"unauthorized": {
+				"title": "Join Beta",
+				"description": "Connect your wallet and get a secret link to create a DAO",
+				"button": "Connect wallet"
+			}
+		},
+		"distribute": {
+			"title": "Distribute NFTs",
+			"nav": {
+				"airdropWallets": {
+					"title": "Airdrop to wallets",
+					"description": "Send NFTs to specific wallet addresses"
+				},
+				"airdropEmails": {
+					"title": "Airdrop to emails",
+					"description": "Send claim links via email"
+				},
+				"publicSale": {
+					"title": "Public sale",
+					"description": "NFT sale available to everyone"
+				},
+				"privateSale": {
+					"title": "Private sale",
+					"description": "Only for whitelisted users"
+				},
+				"claimLink": {
+					"title": "Claim link",
+					"description": "Everyone with the link can claim the NFTs"
+				}
+			}
+		},
+		"scorings": {
+			"adopters": {
+				"title": "Early adopters",
+				"additional": "Early adopters",
+				"insights": {
+					"hasDeployersCount": "Deployed to mainnet",
+					"hasWhalesCount": "Whales",
+					"hasMoreThanTargetScore": "Score > 70%",
+					"hasMoreThanTargetNft": "Have > 10 NFT"
+				}
+			},
+			"adopters_copy": {
+				"title": "[COPY] Early adopters",
+				"additional": "[COPY] Early adopters"
+			},
+			"developers": {
+				"title": "Developers",
+				"additional": "Developers"
+			},
+			"talent_protocol": {
+				"title": "Talent protocol",
+				"additional": "Talent protocol"
+			},
+			"smoothie": {
+				"title": "Smoothie",
+				"additional": "Smoothie"
+			},
+			"quicknode": {
+				"title": "Quicknode"
+			},
+			"hito_wallet": {
+				"title": "Hito wallet"
+			},
+			"audiences": {
+				"title": "Audiences",
+				"new": "New audience",
+				"search": "Search",
+				"tags": {
+					"audience:developers": "Developer",
+					"developer": "Developer",
+					"audience:early_adopters": "Crypto native",
+					"audience:gaming": "Gamer",
+					"audience:defi": "DeFi",
+					"audience:culture": "Culture",
+					"ens": "ENS",
+					"dexer": "Dexer",
+					"influencer": "Influencer",
+					"hunter": "Hunter",
+					"whale": "Whale",
+					"farcaster": "Farcaster",
+					"smoothie": "Smoothie",
+					"talent_protocol": "Talent protocol"
+				}
+			}
+		},
+		"babyRobotMint": {
+			"title": "Super Robots",
+			"subtitle": "Mint your Super Robot NFT",
+			"mintError": "Error while minting Super Robot"
+		},
+		"babyRobotSuccess": {
+			"title": "Super Robots preview",
+			"subtitle": "Look at your Super Robot NFT"
+		},
+		"offersList": {
+			"title": "Rewards",
+			"subtitle": "Get rewards from the hottest Web3 projects",
+			"subtitleMobileMain": "Get rewards",
+			"subtitleMobileSecondary": "from the hottest Web3 projects",
+			"chips": {
+				"all": "All",
+				"mint": "Free NFT",
+				"quest": "Quest",
+				"test": "Test"
+			},
+			"offer": {
+				"claims_one": "claim",
+				"claims_other": "claims",
+				"newCount": "New",
+				"requirements": {
+					"title": "Requirements",
+					"types": {
+						"mint": {
+							"title": "Mint NFT",
+							"text": "Just mint NFT and receive all benefits from your new achievement"
+						}
+					}
+				}
+			},
+			"feed": {
+				"noRewards": {
+					"title": "There is no rewards",
+					"text": "Check again later"
+				}
+			}
+		},
+		"offerDetails": {
+			"status": {
+				"active": "active",
+				"ended": "ended"
+			},
+			"ending": "Ending",
+			"more_benefits_one": "And {{count}} more benefit",
+			"more_benefits_other": "And {{count}} more benefits",
+			"forOwners": "For owners"
+		}
+	},
+	"components": {
+		"notFound": {
+			"title": "Page not found",
+			"text": "The page you are trying to access does not exist\nor has been moved. Try going back to our homepage",
+			"action": "Go to homepage"
+		},
+		"onboarding": {
+			"title": "Getting started",
+			"profile": {
+				"label1": "Edit your profile",
+				"label2": "To express yourself"
+			},
+			"dao": {
+				"label1": "Create DAO",
+				"label2": "To grow your community in a minutes"
+			},
+			"discovery": {
+				"label1": "Explore popular DAOs",
+				"label2": "To find something interesting"
+			}
+		},
+		"user": {
+			"actions": {
+				"edit": "Edit profile",
+				"logout": "Log out",
+				"help": "Help & Support"
+			},
+			"displayName": {
+				"label": "Name",
+				"placeholder": "Display name"
+			},
+			"slug": {
+				"label": "Public URL",
+				"placeholder": "Enter your public URL"
+			},
+			"bio": {
+				"label": "Bio",
+				"placeholder": "Enter your bio"
+			},
+			"wallet": {
+				"addressLabel": "Wallet address",
+				"ensLabel": "ENS domain"
+			},
+			"addContacts": "Add contacts",
+			"links": {
+				"label": "Links",
+				"twitterPlaceholder": "Twitter username",
+				"sitePlaceholder": "Personal site link",
+				"telegramPlaceholder": "Telegram username",
+				"instagramPlaceholder": "Instagram username",
+				"discordPlaceholder": "Discord server link"
+			},
+			"profile": "Profile"
+		},
+		"dao": {
+			"actions": {
+				"edit": "Edit dao"
+			},
+			"title": "DAO",
+			"navigation": {
+				"section": {
+					"settings": "Settings"
+				},
+				"links": {
+					"about": "About",
+					"feed": "Feed",
+					"members": "Members",
+					"voting": "Voting",
+					"treasury": "Treasury",
+					"settings": "Settings",
+					"general": "General",
+					"generalSettings": "General",
+					"emailSettings": "Email",
+					"documents": "Documents",
+					"profile": "Profile",
+					"customize": "Customize NFTs",
+					"distribute": "Distribute NFTs",
+					"admins": "Admins",
+					"campaigns": "Campaigns",
+					"automations": "Automations"
+				},
+				"unauthorized": {
+					"joinSuperdao": "Join Superdao",
+					"createDaoInOneClick": "Сreate your DAO in one click"
+				}
+			},
+			"daoCreated": {
+				"hint": {
+					"title": "Congrats, your first DAO is created",
+					"subtitle": "You can customize it and grow your community by inviting new members"
+				},
+				"modal": {
+					"title": "Let’s name your first DAO",
+					"description": "No worries, you can change it later",
+					"placeholder": "Give your DAO a catchy name",
+					"error": "Something went wrong while updating dao name",
+					"validationError": "Should be at least {{count}} characters"
+				}
+			},
+			"snapshot": {
+				"hint": {
+					"title": "Connect Snapshot",
+					"subtitle": "Integrate Snapshot voting now by clicking here, or later in Settings"
+				}
+			},
+			"name": {
+				"label": "Name",
+				"placeholder": "Give your DAO a catchy name"
+			},
+			"description": {
+				"label": "Description",
+				"placeholder": "Tell what your DAO's about"
+			},
+			"smartContract": {
+				"label": "Smart contract"
+			},
+			"voting": {
+				"label": "Voting",
+				"title": "Voting",
+				"action": "Connect Snapshot",
+				"addProposal": "Add proposal",
+				"createOnSuperdao": "Create on Superdao",
+				"createOnSnapshot": "Create on Snapshot",
+				"openSnapshot": "Open Snapshot",
+				"disconnect": "Disconnect",
+				"onSnapshot": "Snapshot",
+				"plug": "No {{filter}} proposals",
+				"settings": "Proposal settings",
+				"preview": {
+					"heading": "Proposal preview"
+				},
+				"zone": {
+					"cards": {
+						"superdao": {
+							"heading": "New proposal on Superdao",
+							"description": "Create votings instantly",
+							"actions": {
+								"create": "Create proposal"
+							}
+						},
+						"snapshot": {
+							"heading": "Voting with Snapshot ",
+							"description": "Connect Snapshot to set up votings",
+							"actions": {
+								"connect": "Connect",
+								"create": "Create proposal"
+							}
+						}
+					}
+				},
+				"proposal": {
+					"upcoming": {
+						"minutes_one": "Starts in {{count}} minute",
+						"minutes_other": "Starts in {{count}} minutes",
+						"hours_one": "Starts in {{count}} hour",
+						"hours_other": "Starts in {{count}} hours"
+					},
+					"active": {
+						"minutes_one": "Ends in {{count}} minute",
+						"minutes_other": "Ends in {{count}} minutes",
+						"hours_one": "Ends in {{count}} hour",
+						"hours_other": "Ends in {{count}} hours",
+						"days_one": "Ends in {{count}} day",
+						"days_other": "Ends in {{count}} days"
+					},
+					"activeFor": {
+						"minutes_one": "Active for {{count}} minute",
+						"minutes_other": "Active for {{count}} minutes",
+						"hours_one": "Active for {{count}} hour",
+						"hours_other": "Active for {{count}} hours",
+						"days_one": "Active for {{count}} day",
+						"days_other": "Active for {{count}} days"
+					},
+					"pending": "Starts {{month}} {{day}}",
+					"closed": "Closed {{month}} {{day}}, {{year}}"
+				},
+				"filter": {
+					"all": "All",
+					"active": "Active",
+					"pending": "Pending",
+					"upcoming": "Upcoming",
+					"closed": "Closed"
+				},
+				"modal": {
+					"title": "Snapshot connected",
+					"description": "Check our guide on voting strategies to create engaging proposals",
+					"strategies": "Voting strategies"
+				},
+				"deleteModal": {
+					"heading": "Delete proposal?",
+					"description": "Voting results will not be saved",
+					"delete": "Delete"
+				},
+				"exitSettingsModal": {
+					"heading": "Quit edit mode?",
+					"description": "All data will be lost"
+				},
+				"edit": {
+					"name": "Snapshot",
+					"space": "Go to space",
+					"strategies": "Strategies",
+					"disconnect": "Disconnect"
+				},
+				"edition": {
+					"title": {
+						"heading": "Subject",
+						"placeholder": "Title"
+					},
+					"description": {
+						"heading": "Description",
+						"placeholder": "Details of your proposal"
+					},
+					"upload": "Upload image",
+					"votingType": {
+						"heading": "Voting type",
+						"yesNoAbstain": "Yes / No / Abstain",
+						"single": "Single choice",
+						"multiple": "Multiple choice"
+					},
+					"option": "option {{index}}",
+					"optionsMinimum": "Minimum 2 options",
+					"optionsAdd": "Add option",
+					"selectDate": "Select date",
+					"selectTime": "Select time",
+					"now": "Now",
+					"starts": "Starts",
+					"ends": "Ends",
+					"endingDays": "in {{count}} days",
+					"endingHours": "in < 1 day",
+					"am": "{{date}}:00 am",
+					"pm": "{{date}}:00 pm",
+					"submitError": "Something went wrong",
+					"modal": {
+						"start": {
+							"heading": "Start date"
+						},
+						"end": {
+							"heading": "End date"
+						}
+					},
+					"hints": {
+						"choices": {
+							"filled": "You must specify every option and minimum 2 options",
+							"length": "Option cannot be longer than {{length}} characters",
+							"unique": "You must specify unique options"
+						},
+						"start": {
+							"valid": "Start time must be in the future"
+						},
+						"end": {
+							"is": "Specify End time of proposal",
+							"valid": "End time must be after start time"
+						},
+						"title": {
+							"filled": "You must specify title",
+							"length": "Proposal subject should be at most {{count}} characters long"
+						},
+						"description": "You must specify description"
+					}
+				},
+				"integration": {
+					"ensStep": {
+						"heading": "ENS domain",
+						"description": "ENS domain is needed for snapshot integration. It is proof of your uniqueness and recognizing by users. If you have no ENS domain, go to",
+						"link": "guide",
+						"placeholder": "example.eth",
+						"action": "Connect",
+						"error": {
+							"notEns": "Is not valid ENS domain name"
+						}
+					},
+					"spaceStep": {
+						"heading": "Snapshot Space",
+						"description": "It’s required to have a Space on Snapshot. If you do not know how to create Space, go to",
+						"link": "guide",
+						"action": "Continue",
+						"progress": {
+							"label": "Looking for Snapshot Space",
+							"description": "It can take a few minutes"
+						},
+						"error": {
+							"label": "Can’t find a Space",
+							"description": "Make sure that space exists and try again"
+						},
+						"tryAgain": "Try again"
+					}
+				}
+			},
+			"links": {
+				"website": "Website URL"
+			},
+			"whitelist": {
+				"label": "Whitelist link",
+				"placeholder": "Google form, Typeform, landing page etc."
+			},
+			"publicLink": {
+				"label": "Public link",
+				"placeholder": "Landing page, etc."
+			},
+			"socialLinks": {
+				"label": "Links"
+			},
+			"docs": {
+				"label": "Docs",
+				"addLabel": "Add doc",
+				"nameLabel": "Name",
+				"linkLabel": "Link",
+				"urlPlaceholder": "URL",
+				"placeholders": ["e.g. Whitepaper", "e.g. Jobs", "e.g. Rules"]
+			},
+			"membersBanner": {
+				"title": "Members area",
+				"description": "Join this DAO to see content on this page",
+				"join": "Join DAO"
+			},
+			"votingBanner": {
+				"title": "No proposals yet",
+				"descriptionMember": "There will be something here very soon",
+				"descriptionCreator": "Integrate Snapshot to start voting",
+				"connectSnapshot": "Connect Snapshot"
+			},
+			"proposalBanner": {
+				"title": "No proposals yet",
+				"descriptionMember": "There will be something here very soon",
+				"descriptionCreator": "Create a new proposal to start voting",
+				"addProposal": "Add proposal"
+			},
+			"settings": {
+				"title": "Settings",
+				"general": "General",
+				"treasury": "Treasury",
+				"about": "About",
+				"voting": {
+					"title": "Voting",
+					"tier": "Tier",
+					"weight": "Voting power",
+					"snapshotSettings": "Snapshot settings",
+					"hint": {
+						"settings": "Copy this data to Snapshot settings, use ",
+						"strategy": "strategy erc721-with-metadata-by-ownerof.",
+						"moreInfo": " More info"
+					},
+					"saved": "Saved!"
+				}
+			}
+		},
+		"supportModal": {
+			"heading": "Support",
+			"title": "Contact our support team",
+			"description": "Fill out a short form to get help or share your feedback"
+		},
+		"daoGreetings": {
+			"title": "Your DAO is created",
+			"description": "Congrats, you now have your first DAO! You can customize it and grow your community by inviting new members.",
+			"button": "Got it"
+		},
+		"walletGreetings": {
+			"title": "Your wallet is connected",
+			"description": "Now you can make savings, plan your DAO budget, and handle all that financial stuff along with the other members",
+			"button": "Awesome!"
+		},
+		"welcomeToBetaModal": {
+			"title": "Welcome 👋",
+			"description": "This is a private beta here you can create a DAO",
+			"button": "Create DAO"
+		},
+		"daoList": {
+			"members_one": "{{count}} member",
+			"members_other": "{{count}} members"
+		},
+		"userDaos": {
+			"labels": {
+				"members_one": "{{count}} member",
+				"members_other": "{{count}} members"
+			},
+			"emptyDaos": {
+				"createDao": "Create DAO",
+				"invitingPhrase": "To grow your community"
+			}
+		},
+		"nft": {
+			"send": "Send NFT",
+			"actionTitle": "Add NFTs from Superdao",
+			"actionSubtitle": "Reward contributors and members with Superdao NFT collection.",
+			"addNft": "Add NFTs",
+			"units_one": " unit",
+			"units": "unit{{prefix}}",
+			"unitsWithCount_one": "{{count}} unit",
+			"unitsWithCount_other": "{{count}} units available",
+			"minted": "Minted on Polygon",
+			"receivedFrom": "Received from",
+			"new": "new",
+			"mintMoreNft": "Mint more NFTs",
+			"howToGet": "How to get an NFT",
+			"buyFor": "Buy for {{price}} {{currency}}",
+			"buy": "Buy",
+			"notAvailable": "Not available",
+			"noUnits": "No units",
+			"privateSale": "Private sale"
+		},
+		"crm": {
+			"wallets_capitalize_one": "Wallet",
+			"wallets_capitalize_other": "Wallets"
+		},
+		"treasury": {
+			"open": "Open",
+			"balance": "Balance",
+			"value": "Value",
+			"transactions": "Transactions",
+			"assetsCount_one": "{{count}} asset",
+			"assetsCount_other": "{{count}} assets",
+			"assets_one": "asset",
+			"assets_other": "assets",
+			"nfts_title": {
+				"default": "NFTs",
+				"hidden": "Hidden",
+				"public": "Public",
+				"public_nfts": "Public NFTs"
+			},
+			"nftsHint": "Only polygon NFTs shown",
+			"nftsTooltip": "Due to technical limits, now we cannot display NFTs for all networks",
+			"hash": "Hash",
+			"from": "From",
+			"to": "To",
+			"wallets_one": "wallet",
+			"wallets_other": "wallets",
+			"totalFunds": "Total balance",
+			"totalValue": "Total value",
+			"transfer": "Start transfer",
+			"priceUsd": "Price, USD",
+			"valueUsd": "Value, USD",
+			"description": "Description",
+			"nftSale": "NFT Sale",
+			"type": "type",
+			"addWalletBtn": "Add wallet",
+			"descriptionPlaceholder": "Click to add description",
+			"owners_one": "owner",
+			"owners_other": "owners",
+			"notMemberTooltip": "Not DAO Member",
+			"transactionID": "Transaction ID",
+			"gasFee": "Gas fee",
+			"executed": "Executed",
+			"outgoing": "outgoing",
+			"incoming": "incoming",
+			"transactionsTooltip": "Due to technical limits, now we cannot display transactions for all networks",
+			"dashboard": "Dashboard",
+			"hide": "Hide",
+			"seeAll": "See all",
+			"today": "today",
+			"yesterday": "yesterday",
+			"descriptionModal": {
+				"addDescription": "Add transaction description",
+				"editDescription": "Edit transaction description",
+				"hint": "Description will be displayed only on Superdao platform. This will not be visible in Blockchain scanners.",
+				"placeholder": "To be or not to be..."
+			},
+			"quickActionsBar": {
+				"transferNft": {
+					"label": "Transfer NFT",
+					"caption": "Send NFT by wallet address"
+				},
+				"shareTreasury": {
+					"label": "Share treasury info",
+					"caption": "Receive money from users"
+				},
+				"transferAsset": {
+					"label": "Transfer asset",
+					"caption": "Send money by wallet address"
+				}
+			},
+			"transferFundsModal": {
+				"title": "Start transferring funds",
+				"from": "Send",
+				"recipient": "Recipient",
+				"recipientPlaceholder": "Member’s wallet address",
+				"asset": "Asset",
+				"amount": "Amount",
+				"amountPlaceholder": "Select asset first",
+				"send": "Send",
+				"max": "max",
+				"description": "You can add the details for this transfer",
+				"select": "Select",
+				"optional": "Optional",
+				"tooltipByWalletTypeInfo": {
+					"safe": "The Gnosis Safe is a multi-signature smart contract wallet that allows users to define a list of owner/signer accounts and a threshold number of signers required to confirm a transaction."
+				},
+				"errors": {
+					"wrongAddress": "Wrong address",
+					"insufficientFunds": "Insufficient funds"
+				},
+				"walletSelectPlaceholder": "Choose wallet",
+				"unavailableWallets": "Unavailable wallets",
+				"unavailableWalletsDescription": "You cannot send assets from these wallets until you become their administrator",
+				"txSimulationError": "This transaction will most likely fail",
+				"wrongChain": "Wrong chain"
+			},
+			"transferNftModal": {
+				"title": "Transfer NFT",
+				"from": "Sending from",
+				"recipient": "Sending to",
+				"transfer": "Transfer",
+				"hint": "Make sure the recipient wallet supports Polygon. If not, the NFT sent may be lost.",
+				"nonTransferableHint": "NFT is not transferable",
+				"artwork": "Artwork",
+				"error": "Looks like this address cannot receive NFT or NFT is not transferable",
+				"nftSelectPlaceholder": "Choose NFT",
+				"nftOptionsDescription": "To transfer other NFTs, change the sending wallet",
+				"walletSelectPlaceholder": "Choose wallet",
+				"unavailableWallets": "Unavailable wallets",
+				"unavailableWalletsDescription": "You cannot send NFTs from these wallets until you become their administrator",
+				"unavailableNfts": "Unavailable NFTs",
+				"unavailableNftsDescription": "Wallet contains not transferable NFTs. You cannot send these NFTs"
+			},
+			"emptyState": {
+				"treasury": "Treasury",
+				"description": "Here you will see all DAO's wallets and funds. Add at least one wallet to collect money, track balance, and transfer money",
+				"assets": "Assets will appear here",
+				"assetsHint": "You will see all the DAO assets here once they are added",
+				"hint": "One day they will appear here",
+				"nfts": "NFTs are missing",
+				"wallets": "No wallets yet",
+				"walletsHint": "You will see all the DAO wallets here once they are added",
+				"transactions": "Transactions will appear here",
+				"transactionsHint": "Start spending to see latest transactions",
+				"achievements": {
+					"title": "Hello! Here will be all your Achievements and badges.",
+					"description": "It's your history in the company, the skills you have gained, participation in training sessions, and game wins. Some Achievements in the collection bring XP, which unlock",
+					"descriptionLabel": "unique bonuses ✨"
+				}
+			},
+			"settingsDropdown": {
+				"remove": "Remove wallet",
+				"settings": "Wallet Settings"
+			},
+			"createWallet": {
+				"baseStep": {
+					"title": "Wallet info",
+					"name": {
+						"label": "Name",
+						"placeholder": "Operating wallet"
+					},
+					"description": {
+						"label": "Description",
+						"placeholder": "Operating Wallet is used for accumulating funds raised through NFT Sale"
+					},
+					"address": {
+						"label": "Address",
+						"placeholder": "Wallet address"
+					},
+					"addWalletBtn": "Add wallet"
+				},
+				"connectWallet": {
+					"title": "Connect your safe or wallet",
+					"hint": "Add an existing Gnosis Safe, create a new one, or connect your wallet",
+					"confirmators_one": "confirmation",
+					"confirmators_other": "confirmations",
+					"addManually": {
+						"label": "Connect wallet",
+						"description": "Link your registered wallet to the DAO"
+					},
+					"newSafe": {
+						"label": "Add a new Gnosis Safe",
+						"description": "Create a new safe at gnosis-safe.io and link it to the DAO"
+					}
+				}
+			},
+			"createSafe": {
+				"addOwner": "Add owner",
+				"ownersCaption": "Your gnosis-safe wallet can have more than one owner. Add additional owners and specify how many of them can confirm a transaction.",
+				"thresholdLabel": "How many confirmations any transaction requires",
+				"thresholdError": "Must be less than or equal to the number of owners",
+				"polygonHint": "Powered by Polygon",
+				"numberOfOwners_one": "of {{count}} owner",
+				"numberOfOwners_other": "of {{count}} owners",
+				"stepsModal": {
+					"title": "Sending signals to space",
+					"description": "We are processing you wallet creation",
+					"fillingFormStep": "Filling the form",
+					"signingStep": "Signing your transactions",
+					"signingDescription": "It usually takes about 1 minute",
+					"addingStep": "Adding your wallet in database",
+					"pendingStep": "Feeding the unicorns",
+					"finishingStep": "Finishing"
+				}
+			},
+			"editWallet": {
+				"title": "Edit Wallet Details"
+			},
+			"removeWalletModal": {
+				"description": "The wallet will only be deleted from Superdao. You can connect it again later."
+			},
+			"shareTreasuryModal": {
+				"title": "Share your wallet info",
+				"description": "Show this QR code or send your personal link to recieve funds to your treasury"
+			}
+		},
+		"textareaMentionEditor": {
+			"emptyListText": "We couldn't find such a DAO"
+		},
+		"achievements": {
+			"card": {
+				"members_one": "{{count}} member",
+				"members_other": "{{count}} members",
+				"achievementsNumberTooltip": "You have {{count}} {{tierName}} achievements",
+				"achievedTooltip": "Achieved"
+			},
+			"leaderboard": {
+				"team": "Team",
+				"role": "Role",
+				"achievements": "Achievements",
+				"level": "Level",
+				"lvl": "LVL",
+				"xp": "XP"
+			},
+			"details": {
+				"labelsTitle": "✨ Features",
+				"owners": {
+					"viewAll": "View all"
+				},
+				"share": "Share your achievement"
+			}
+		},
+		"post": {
+			"confirmations": {
+				"postCreated": "Post has been created",
+				"postDeleted": "Post has been deleted",
+				"postUpdated": "Post has been updated"
+			},
+			"showMoreLabel": "Show more",
+			"showLessLabel": "Show less",
+			"deleteModal": {
+				"title": "Delete post?",
+				"description": "This action cannot be undone"
+			}
+		},
+		"feed": {
+			"empty": {
+				"title": "Empty feed",
+				"description": "No posts yet"
+			},
+			"invitationPost": "Here is your invitation link.\nCopy and share with new members"
+		},
+		"navigation": {
+			"secondary": {
+				"title": "DAOs",
+				"header": "My DAOs",
+				"nodaos": {
+					"noBetaAccess": {
+						"title": "No DAOs yet",
+						"description": "We are in private beta, request access if you really want to create DAO",
+						"requestLabel": "Request access"
+					},
+					"hasBetaAccess": {
+						"title": "No DAOs yet",
+						"description": "Create your first DAO",
+						"requestLabel": "Create DAO"
+					}
+				}
+			}
+		},
+		"select": {
+			"emptyPlaceholderText": "Nothing has been found"
+		},
+		"owners": {
+			"title": "Owners",
+			"titleBtn": "Copy wallets",
+			"download": "Download CSV"
+		},
+		"checkout": {
+			"notEligible": "Your wallet are not eligible for buying NFT",
+			"changeWallet": "Please change wallet and try again"
+		},
+		"artworks": {
+			"title": "Artworks",
+			"error": "An error occurred, please try again later",
+			"zeroArtworks": "The collection is currently empty. please try later"
+		},
+		"buyNft": {
+			"one": {
+				"title": "Get NFT artwork",
+				"desc": "Buy the artwork to add it to your collection"
+			},
+			"random": {
+				"title": "Get random NFT artwork",
+				"desc": "After buy, you will receive one of the artworks randomly"
+			},
+			"reveal": {
+				"title": "Get modified NFT artwork",
+				"desc": "You will see a modified artwork after buying this NFT"
+			},
+			"unique": {
+				"title": "Get one of NFT artworks",
+				"desc": "After buy, you will receive the chosen artwork"
+			},
+			"notEligibleMessage": {
+				"title": "Your wallet is not eligible for buying this NFT",
+				"desc": "Please change wallet and try again"
+			},
+			"buyNowBtn": "Buy now",
+			"btnTextEligible": "Buy for {{price}} {{currency}}",
+			"btnTextNotEligible": "Change wallet",
+			"btnTooltipTextWrongChain": "Wrong chain, please switch to {{chainName}}",
+			"signInForClaim": "Sign in to buy or claim this NFT",
+			"price": "Price",
+			"priceInWhitelist": "Price for whitelist"
+		},
+		"artworkView": {
+			"artworks": "See all artworks"
+		},
+		"nftDetailsTab": {
+			"overview": {
+				"title": "Overview",
+				"benefitsTitle": "Community benefits"
+			},
+			"artworks": {
+				"title": "Artworks",
+				"subtitle": "You will get a random artwork from this set"
+			},
+			"owners": {
+				"title": "Owners"
+			},
+			"properties": {
+				"title": "Properties"
+			},
+			"details": {
+				"title": "Details",
+				"network": "Network",
+				"opensea": "OpenSea",
+				"viewOnOpensea": "View on Opensea",
+				"contractAddress": "Contract address"
+			}
+		},
+		"nftCard": {
+			"benefits": {
+				"title": "CUSTOM BENEFITS",
+				"subtitle": "CUSTOM PROPERTIES"
+			}
+		},
+		"scoring": {
+			"audiences": {
+				"name": "Name",
+				"score": "Score",
+				"filters": "Filters",
+				"tags": "Tags",
+				"activity": "Activity",
+				"contacts": "Contacts",
+				"twitter": "Twitter",
+				"noName": "No name",
+				"wallets": "{{ counter }} wallets",
+				"walletsTooltip": "All audiences",
+				"export": "Export",
+				"addData": "Add data",
+				"insights": "All insights",
+				"new": "New audience",
+				"copyAddress": "Copy address",
+				"sendNft": "Send NFT",
+				"addNote": "Add note",
+				"favorite": "Favorite",
+				"notFound": {
+					"title": "No results",
+					"text": "We couldn’t find anything matching your request. Try another search"
+				},
+				"scoring": "Scoring",
+				"balanceUsd": "Balance, USD",
+				"ens_domain": "Ethereum Name Service domain",
+				"wallet_usd_cap": "Wallet USD capitalization",
+				"twitter_username": "Twitter username",
+				"twitter_url": "Twitter URL",
+				"showLess": "Show less",
+				"scoringNumber": "Index"
+			}
+		},
+		"pagination": {
+			"rowsPerPage": "Rows per page",
+			"ofTotalPages_one": "of {{ count }} page",
+			"ofTotalPages_other": "of {{ count }} pages"
+		}
+	},
+	"modals": {
+		"verifyEmail": {
+			"text": "Enter your email address we can use to get in touch with you"
+		},
+		"enterCode": {
+			"title": "Verification code",
+			"text": "Enter the code sent to",
+			"resendText": "Resend code in 00:{{timing}}",
+			"actions": {
+				"resend": "Resend code",
+				"changeEmail": "Change email",
+				"verify": "Verify"
+			},
+			"errors": {
+				"invalid": "Invalid code, please try again",
+				"expired": "The code expired, please try again",
+				"unknown": "Unkown error during validating code"
+			},
+			"success": "Email verified successfully"
+		},
+		"userAlreadyMintedRobot": {
+			"title": "Not available",
+			"text": "You already claimed your Super Robot before. Please check your wallet"
+		},
+		"rewardMint": {
+			"title": "NFT is on the way  🎉 ",
+			"description": "It will appear in your wallet shortly",
+			"rewards": "Your rewards",
+			"action": "View in profile"
+		},
+		"addNewInsight": {
+			"title": "Add insight",
+			"content": "Currently, new insights can only be added by our product team. To add a new insight, contact us on Telegram"
+		},
+		"superdaoWallet": {
+			"title": "Superdao Wallet",
+			"description": "We created a wallet for you. Here is its public address:",
+			"toast": "Wallet address copied to clipboard",
+			"blocks": {
+				"limitation": {
+					"title": "No limitations",
+					"text": "Superdao Wallet makes all the features\nof the platform available to you"
+				},
+				"security": {
+					"title": "Security",
+					"text": "Private key is securely stored with magic.link"
+				},
+				"compatibility": {
+					"title": "Compatibility",
+					"text": "Wallet can be exported and used with\nexternal applications"
+				}
+			}
+		},
+		"posting": {
+			"title": "New post",
+			"textPlaceholder": "Write a post...",
+			"submit": "Post",
+			"error": {
+				"textOverflow": "Post text must not be longer than {{maxLength}} characters",
+				"emptyBody": "You must add some text or image",
+				"emptyDao": "You must select DAO first"
+			}
+		},
+		"editing": {
+			"title": "Edit post",
+			"submit": "Save"
+		},
+		"nft": {
+			"send": {
+				"sendLabel": "Send NFT",
+				"recipent": "Recipent",
+				"selectPlaceholder": "Member’s name or address"
+			},
+			"choose": {
+				"chooseLabel": "Choose",
+				"chooseNftLabel": "Choose an NFT"
+			},
+			"newNft": {
+				"title": "You’ve got a new NFT",
+				"yay": "Yay",
+				"howToOpensea": "How to show it on Opensea"
+			}
+		},
+		"tierManager": {
+			"cancel": "Cancel",
+			"save": "Save",
+			"unitsAvailable": "{{amount}} units available",
+			"walletsInGroup": "{{amount}} wallet(s)",
+			"walletsError": "Number of wallets must not exceed the number of units. Please, change the tier or request more units from Superdao team",
+			"tiersError": "You must select at least 1 tier",
+			"invalidAddressError": "Invalid address",
+			"airdrop": {
+				"heading": "Assign tier to Member",
+				"description": "Assign NFT tier for wallets to airdrop or skip it",
+				"action": {
+					"name": "Airdrop",
+					"sendNft": "Send NFT",
+					"notSendNft": "Don't send NFT",
+					"sendNftWithCount_one": "Send {{count}} NFT",
+					"sendNftWithCount_other": "Send {{count}} NFTs"
+				},
+				"tiers": {
+					"name": "Select a tier",
+					"select": "Select"
+				}
+			},
+			"whitelist": {
+				"heading": "Assign tier to epic",
+				"description": "Assign available NFT tier or skip it",
+				"action": {
+					"name": "Whitelist",
+					"sendNft": "Add to whitelist",
+					"notSendNft": "Don’t add to whitelist",
+					"addWallet": "Add wallet",
+					"addWalletWithCount_one": "Add {{count}} wallet",
+					"addWalletWithCount_other": "Send {{count}} wallets"
+				},
+				"tiers": {
+					"name": "Select a tier",
+					"select": "Select",
+					"all": "All tiers",
+					"notSelected": "Not selected",
+					"selectAvailable": "Select available tier"
+				}
+			}
+		},
+		"daoLimit": {
+			"title": "Limit is reached",
+			"content": "Try again tomorrow or write to the support",
+			"actions": {
+				"support": "Support"
+			}
+		},
+		"requestBetaAccess": {
+			"title": "Request access to create DAO",
+			"content": "We are in private beta, so if you really want to create DAO, fill in this form to request access",
+			"requestLabel": "Request access"
+		},
+		"sendNft": {
+			"title": "Send NFT",
+			"recipientLabel": "Recipient",
+			"recipientPlaceholder": "Member’s name or address",
+			"messageLabel": "Comment",
+			"nftUnit": "NFT unit",
+			"actions": {
+				"choose": "Choose NFT",
+				"cancel": "Cancel",
+				"submit": "Send"
+			},
+			"status": {
+				"sending": "Sending NFT...",
+				"success": "NFT was sent successfully",
+				"error": "Failed to send NFT."
+			}
+		},
+		"mintMoreNft": {
+			"title": "Mint more NFT",
+			"label": "If you want to mint more NFTs, please reach us by email",
+			"gotIt": "Got it"
+		},
+		"step": {
+			"title": {
+				"airdrop": "Airdrop steps",
+				"whitelist": "Whitelist steps"
+			},
+			"steps": {
+				"add": "Add to whitelist",
+				"mint": "Mint NFT",
+				"send": "Send NFT"
+			},
+			"restartText": "Try again",
+			"error": "Transaction failed. Insufficient balance."
+		},
+		"daoPassSuccess": {
+			"title": "Your DAO is created",
+			"content": "Congrats, you now have your first DAO! You can customize it and grow your community by inviting new members.",
+			"enter": "Enter DAO workspace"
+		},
+		"customize": {
+			"title": "Creator admin is coming soon",
+			"desc": "We will introduce this feature shortly. If you want to customize your collection now, please contact our support team",
+			"btnContact": "Contact support"
+		},
+		"selfServiceTier": {
+			"createTitle": "Add new tier",
+			"editTitle": "Edit tier",
+			"fields": {
+				"name": {
+					"label": "Name",
+					"placeholder": "Enter name",
+					"errorSizeBytes": "Tier name should be less than 32 symbols in length",
+					"errorEmpty": "Tier name is required"
+				},
+				"amount": {
+					"label": "Quantity",
+					"placeholder": "Copies between {{minAmount}} and 999 999 999",
+					"error": "Only Numbers",
+					"errorEmpty": "Minimum amount is {{minAmount}}",
+					"errorMax": "Should be less then 1 000 000 000",
+					"errorMaxLimit": "Should be less than {{value}}",
+					"errorMinLimit": "Should be more than {{minAmount}}"
+				},
+				"type": {
+					"label": "Type"
+				},
+				"artwork": {
+					"label": "Artwork",
+					"maxSize": "Max {{size}}",
+					"wrongFormat": "Wrong format",
+					"tooManyFiles": "Too many files",
+					"error": "No more than {{imgSize}} per image and {{videoSize}} for video",
+					"errorMaxLimit": "Should be less than {{value}}",
+					"errorMinLimit": "Should be more than {{value}}",
+					"errorEquality": "Artworks count should be equal {{count}}"
+				},
+				"transferable": {
+					"label": "Transferable",
+					"dateMinError": "Should be greater than today"
+				},
+				"unlock": {
+					"label": "Transfer Unlock Date",
+					"placeholder": "Enter a value"
+				},
+				"fee": {
+					"label": "Fee, %",
+					"description": {
+						"default": "Set the royalty fee you want to get if the NFT is resold on Opensea",
+						"transferable": "Royalty fees are charged to the seller when the NFT is sold on OpenSea.\nThe fee can be set after making at least one tier of NFTs transferable after mint."
+					},
+					"placeholder": "0-10",
+					"error": "Incorrect value. Fee must be 0-10%.",
+					"tooltip": "The royalty fee will be allocated to the same wallet as the one selected for the NFT sale upon the secondary sale on OpenSea"
+				},
+				"feeWallet": {
+					"label": "Fee wallet",
+					"description": "Royalties from NFT resales will be sent to this wallet monthly ",
+					"placeholder": "Enter wallet address",
+					"error": "Wrong wallet format"
+				},
+				"description": {
+					"label": "Description",
+					"placeholder": "Enter tier description",
+					"error": "Should be less than 500 symbols"
+				}
+			},
+			"hints": {
+				"artwork": "Image (PNG, GIF, SVG, JPG) Max size: {{imgSize}}.\nVideo (MP4, WEBM) Max size: {{videoSize}}.",
+				"preview": "The preview will be displayed \nin the list of NFTs on Opensea Image (PNG, GIF, SVG, JPG) \nMax size: {{imgSize}}.\n"
+			},
+			"preview": {
+				"empty": "Preview your Artwork",
+				"upload": "Upload artworks JPG,\u00A0PNG,\u00A0GIF,\u00A0SVG max {{imgSize}} or video MP4, WEBM max {{videoSize}}",
+				"emptyPreview": "If there is no preview, we will use the first frame of the video",
+				"addArtwork": "Add artwork",
+				"addArtworks": "Add artworks",
+				"heading": "Uploading",
+				"addArtworksCount": "Add {{count}} artworks",
+				"size": "Size",
+				"resolution": "Resolution",
+				"compressing": "Compressing..."
+			},
+			"uploadPlaceholder": "Upload artwork",
+			"uploadAnotherPlaceholder": "Upload another artwork",
+			"previewPlaceholder": "Upload preview",
+			"typeSelect": {
+				"single": {
+					"label": "Single artwork",
+					"description": "Only the artwork"
+				},
+				"random": {
+					"label": "Random",
+					"description": "After buy, you will receive one of the artworks randomly"
+				}
+			},
+			"actions": {
+				"createTier": "Create tier",
+				"saveTier": "Save"
+			}
+		},
+		"addNewAudience": {
+			"title": "Add a new audience",
+			"content": "Currently, new audiences can only be added by our product team. To add a new audience, contact us on Telegram",
+			"actions": {
+				"contact": "Contact us"
+			}
+		},
+		"activatePremium": {
+			"title": "Activate a Premium account",
+			"content": "This feature is only available for Premium members. To get a Premium account, contact us on Telegram"
+		}
+	},
+	"features": {
+		"robotMintV2": {
+			"content": {
+				"mintingNow": "Minting now",
+				"title": {
+					"action": "Mint your",
+					"target": "Super Robot"
+				},
+				"hint": "Super Robot reflects your wallet history",
+				"mintCount": "{{count}} minted",
+				"noGasFee": "No gas fee",
+				"tooltip": {
+					"title": "Absolutely free",
+					"text": "Superdao pays gas fee for you"
+				},
+				"yourWallet": "Your wallet",
+				"waitlist": {
+					"title": "Stay tuned! We'll notify you when you can get your Robot",
+					"text": "This mint is for whitelisted wallets only. You will receive an email when the public mint starts"
+				},
+				"mint": {
+					"title": "You already claimed your Super Robot"
+				}
+			},
+			"success": {
+				"title": "Your robot generated   🎉",
+				"text": "Your NFTs will reach your wallet in a few minutes",
+				"guide": "Robot owner guide",
+				"guideShort": "Guide",
+				"telegram": "Join community",
+				"telegramShort": "Community",
+				"share": "Share on Twitter",
+				"shareShort": "Share",
+				"properties": "Properties"
+			},
+			"modal": {
+				"title": "Generating your Robot",
+				"text": "Will be ready in a few seconds"
+			}
+		},
+		"babyRobots": {
+			"success": {
+				"title": "Mint successful  🎉 ",
+				"text": "Your NFT will reach your wallet in a few minutes. Meanwhile, share your Super Robot on Twitter"
+			},
+			"walletNotIndexed": "This address is not indexed by Superdao",
+			"addWallet": "Add wallet address to see details",
+			"selectInterestsLabel": "Select your interests",
+			"walletLabel": "Connect your wallet",
+			"generateLabel": "Generate your Super Robot",
+			"generateButtonText": "Generate",
+			"regenerateButtonText": "Try another wallet",
+			"noGasFeeHint": "No gas fee",
+			"errorDuringMintBabyRobot": "Error during minting Super Robot",
+			"mintButtonText": "Mint",
+			"walletHead": "Wallet",
+			"scoreHead": "Score",
+			"tagsHead": "Tags",
+			"balanceHead": "Balance, $",
+			"nftsHead": "NFTs",
+			"makeRandomRobotBtn": "Show random robots",
+			"robotPreviewText": "Super Robot reflects your wallet history",
+			"robotPreviewStepTitleText": "Generate your Super Robot",
+			"robotProcessMintStepTitleText": "Mint your Super Robot",
+			"randomModalTitle": "Random Super Robots",
+
+			"mint": {
+				"progress": {
+					"title": "Super Robot",
+					"description": "Complete 2 steps to get personalized NFT"
+				},
+				"privacy": {
+					"title": "Privacy policy",
+					"content": "Your email will be shared with the free mint campaign organizers.",
+					"addon": "For more information, see our full <1>Privacy policy</1>"
+				},
+				"steps": {
+					"mintProcess": {
+						"title": "Mint your Super Robot"
+					},
+					"interests": {
+						"title": "Meet your Super Robot",
+						"condition": "Choose at least {{count}} interests",
+						"entries": {
+							"defi": "DeFi",
+							"metaverse": "Metaverse",
+							"art": "Art",
+							"gaming": "Gaming",
+							"web3Careers": "Web3 careers",
+							"programming": "Programming",
+							"music": "Music",
+							"luxury": "Luxury",
+							"photography": "Photography",
+							"fashion": "Fashion",
+							"profilePictures": "Profile pictures"
+						}
+					},
+					"offers": {
+						"title": "Free mints",
+						"subtitle": "Based on your interests and wallet history <1></1> <2>Privacy Policy</2>",
+						"empty": "Looks like you have already claimed all offers",
+						"condition": "Choose at least {{count}} rewards"
+					}
+				}
+			}
+		},
+		"campaignClaim": {
+			"form": {
+				"daoHint": "A unified web3 mailbox for all your wallet addresses",
+				"giftTitle": "Your rewards",
+				"giftHint": "Fill in the form to get",
+				"nftHint": "NFT",
+				"inputs": {
+					"walletAddress": {
+						"label": "Wallet address *",
+						"hint": "Fill in your details to get this NFT",
+						"placeholder": "Enter wallet address (ETH)"
+					},
+					"email": {
+						"label": "Email *",
+						"placeholder": "Enter email address"
+					}
+				}
+			},
+			"errorPlug": {
+				"title": "Superdao is overloaded",
+				"description": "This may affect the page opening speed.\nPlease wait some time or try again later",
+				"buttonText": "Go back"
+			},
+			"hashmail": {
+				"bonuses": {
+					"space": "Free storage of up to 500 Mb for all NFT holders",
+					"usdc": "200 USDC reward for 20\nrandomly selected holders (10 USDC each)",
+					"role": "Special Discord 'Hashmail OG' role for all holders"
+				},
+				"toasts": {
+					"alreadyClaimed": {
+						"description": "You already claimed this NFT before. Please check your wallet."
+					}
+				}
+			},
+			"result": {
+				"title": "Your NFT is on its way",
+				"subtitle": "It may take some time for the NFT to reach your wallet. Please check it later",
+				"got": "You also got",
+				"benefits": {
+					"one": "Free storage of up to 500 Mb for all NFT holders",
+					"two": "200 USDC reward for 20 randomly selected holders (10 USDC each)",
+					"three": "Special Discord 'Hashmail OG' role for all holders"
+				},
+				"error": {
+					"title": "Your wallet is not on the allow list",
+					"subtitle": "We added you to the waitlist and will get back to you when you're qualified"
+				},
+				"poweredBy": "Powered by"
+			}
+		}
+	},
+	"upload": {
+		"image": {
+			"buttonLabel": "Add image"
+		},
+		"logoLabel": "Upload logo",
+		"avatarLabel": "Profile image",
+		"coverLabel": "Cover image",
+		"maxSize": "Image (PNG, JPG or GIF). Max\u00A0size\u00A0250MB"
+	},
+	"tooltips": {
+		"navigation": {
+			"daos": {
+				"title": "DAOs"
+			},
+			"feed": {
+				"title": "Feed",
+				"description": "Coming soon"
+			},
+			"discover": {
+				"title": "Discover",
+				"description": "Coming soon"
+			},
+			"knowledge": {
+				"title": "Knowledge base"
+			},
+			"chat": {
+				"title": "Message support"
+			},
+			"createDao": {
+				"title": "Create DAO"
+			},
+			"profile": {
+				"description": "My Profile"
+			}
+		},
+		"support": {
+			"description": "Support and resources"
+		},
+		"nft": {
+			"card": {
+				"tier": "Tier",
+				"available": "Available",
+				"notAvailable": "Tier is not available to you"
+			}
+		}
+	},
+	"toasts": {
+		"claimCampaign": {
+			"failed": "Something went wrong while minting your nft"
+		},
+		"banMember": {
+			"loading": {
+				"title": "Banning {{name}}",
+				"description": "It can take a few minutes"
+			},
+			"success": "{{name}} successfully banned",
+			"failed": "Something went wrong"
+		},
+		"burnNft": {
+			"loading": {
+				"title": "Burning {{count}} NFT{{prefix}} in {{name}} wallet",
+				"description": "It can take a few minutes"
+			},
+			"success": "NFT successfully burned",
+			"failed": "Something went wrong"
+		},
+		"transferFunds": {
+			"success": {
+				"title": "Transfer initiated.",
+				"action": "Sign and Execute."
+			},
+			"failed": "Transfer initiation failed. Please try again."
+		},
+		"transferNft": {
+			"success": {
+				"title": "Transfer completed"
+			}
+		},
+		"airdrop": {
+			"loading": {
+				"title_one": "Sending {{count}} NFT.",
+				"title_other": "Sending {{count}} NFTs.",
+				"titleProcessing": "Airdrop processing.",
+				"description": "It can take a few minutes"
+			},
+			"action": {
+				"details": "Details"
+			},
+			"success": "{{walletsCount}} NFT{{prefix}} sent",
+			"failed": "Something went wrong!  Please contact Superdao support.",
+			"completed": "Airdrop completed"
+		},
+		"whitelist": {
+			"loading": {
+				"title_one": "Adding {{count}} wallet to whitelist.",
+				"title_one_remove": "Removing {{count}} wallet from whitelist.",
+				"title_other": "Adding {{count}} wallets to whitelist.",
+				"titleProcessing": "Whitelist processing.",
+				"description": "It can take a few minutes"
+			},
+			"failed": "Whitelist saving failed. Please check your whitelist for errors and try again.",
+			"failedRemove": "An error occurred while deleting from the whitelist.",
+			"success": "{{walletsCount}} wallets added to whitelist.",
+			"successRemove": "{{name}} was removed from whitelist."
+		},
+		"createDao": {
+			"loading": {
+				"title": "Pending Transaction.",
+				"temporaryTitleToDelete": "Creating DAO..."
+			},
+			"success": {
+				"title": "Transaction completed",
+				"temporaryTitleToDelete": "DAO was created",
+				"description": "Your smart contract is loading. It will take a few minutes."
+			},
+			"failed": {
+				"title": "Something went wrong.",
+				"description": "Please try again"
+			}
+		},
+		"createWallet": {
+			"success": {
+				"title": "Wallet was added"
+			},
+			"failed": {
+				"title": "Something went wrong.",
+				"description": "Please try again"
+			}
+		},
+		"removeWallet": {
+			"success": {
+				"title": "Wallet removed successfully"
+			},
+			"failed": {
+				"title": "Something went wrong.",
+				"description": "Please, try again"
+			}
+		},
+		"updateWallet": {
+			"success": {
+				"title": "Wallet details changed successfully"
+			}
+		},
+		"buyNft": {
+			"loading": "NFT buying is in progress",
+			"success": "NFT was bought successfully",
+			"fail": "Something went wrong. Please contact Superdao support.",
+			"insufficientFunds": "Not enough MATIC for purchase"
+		},
+		"serverError": "Server error. Please try again later.",
+		"wrongChain": {
+			"title": "Wrong chain.",
+			"switchButton": "Switch to",
+			"attempting": "Attempting to switch chain...",
+			"error": "Something went wrong. Try to switch chain manually in your wallet app"
+		},
+		"walletNotConnected": {
+			"awaitingWallet": "Awaiting wallet to connect...",
+			"title": "The wallet is not connected. Please check your wallet app",
+			"description": "The wallet is not connected. Please check your wallet app"
+		},
+		"fillInput": {
+			"email": "Please enter your email address"
+		},
+		"changeRole": {
+			"success": "Role successfully changed",
+			"fail": "Can’t change the role now."
+		},
+		"deleteTier": {
+			"loading": "Deleting a tier",
+			"success": "Tier has been deleted",
+			"error": "Can’t delete a tier now"
+		},
+		"deactivatedLink": {
+			"success": "Link deactivated successfully",
+			"loading": "Link deactivation in progress",
+			"error": "An error occurred while deactivating the link"
+		},
+		"editSale": {
+			"setup": {
+				"message": "Saving a sale",
+				"success": "Sale has been saved"
+			},
+			"edit": {
+				"message": "Saving a sale",
+				"success": "Sale has been saved"
+			},
+			"error": "Can’t save sale now.",
+			"retry": "Retry"
+		},
+		"updateCollection": {
+			"updating": "Updating collection",
+			"success": "Collection updated. The DAO page will update in 5 minutes.",
+			"fail": "Something went wrong. Please try again later."
+		},
+		"setupSale": {
+			"updating": "Setting up sale",
+			"success": "Sale has been set up.",
+			"fail": "Something went wrong. Please try again later."
+		},
+		"updateSale": {
+			"updating": "Updating sale",
+			"success": "Sale has been updated.",
+			"fail": "Something went wrong. Please try again later."
+		}
+	},
+	"prepositions": {
+		"of": "of"
+	},
+	"parts": {
+		"unlimitedMaxAmount": "unlimited"
+	}
+}

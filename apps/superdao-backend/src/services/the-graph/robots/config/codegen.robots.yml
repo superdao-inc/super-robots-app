@@ -1,0 +1,22 @@
+schema: apps/superdao-backend/src/services/the-graph/robots/schemas/*.gql
+documents: 'apps/superdao-backend/src/services/babyRobotGraph/**/*.gql'
+generates:
+  apps/superdao-backend/src/services/babyRobotGraph/types/types.generated.ts:
+    plugins:
+      - typescript
+      - add:
+          content: '/* eslint-disable no-shadow,camelcase */'
+  apps/superdao-backend/src/:
+    preset: near-operation-file
+    presetConfig:
+      extension: .generated.ts
+      baseTypesPath: 'services/babyRobotGraph/gql/types.generated.ts'
+
+    plugins:
+      - add:
+          content: '// @ts-nocheck'
+      - typescript-operations
+      - typescript-graphql-request
+
+    config:
+      skipTypename: true

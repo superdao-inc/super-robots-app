@@ -1,0 +1,32 @@
+{
+	"name": "@sd/errors",
+	"private": true,
+	"version": "0.0.1",
+	"license": "UNLICENSED",
+	"main": "dist/index.js",
+	"types": "src/index.ts",
+	"scripts": {
+		"prebuild": "json -I -f package.json -e \"this.main='dist/index.js'\" -o json-tab",
+		"build": "tsc",
+		"lint": "eslint --cache --quiet \"src/**/*.{js,ts,tsx}\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://gitlab.superdao.co/dev/common/app",
+		"directory": "packages/errors"
+	},
+	"dependencies": {
+		"@sentry/nextjs": "7.45.0",
+		"@sentry/types": "7.37.0",
+		"@types/lodash": "4.14.185",
+		"axios": "0.24.0",
+		"json": "11.0.0",
+		"lodash": "4.17.21",
+		"type-fest": "2.19.0",
+		"typescript": "4.5.2"
+	},
+	"devDependencies": {
+		"@sd/eslint-config-superdao": "workspace:*",
+		"eslint": "8.24.0"
+	}
+}

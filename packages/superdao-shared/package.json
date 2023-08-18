@@ -1,0 +1,40 @@
+{
+	"name": "@sd/superdao-shared",
+	"private": true,
+	"version": "0.0.1",
+	"description": "Superdao common lib",
+	"main": "dist/index.js",
+	"types": "src/index.ts",
+	"license": "UNLICENSED",
+	"repository": {
+		"type": "git",
+		"url": "https://gitlab.superdao.co/dev/common/app",
+		"directory": "packages/superdao-shared"
+	},
+	"scripts": {
+		"prebuild": "json -I -f package.json -e \"this.main='dist/index.js'\" -o json-tab",
+		"build": "tsc",
+		"lint": "eslint --cache --quiet \"src/**/*.{js,ts,tsx}\"",
+		"contracts:types": "typechain --target ethers-v5 --out-dir src/contracts/generated './src/contracts/abi/*.json'"
+	},
+	"dependencies": {
+		"@ethersproject/abi": "5.7.0",
+		"@ethersproject/providers": "5.7.1",
+		"@types/lodash": "4.14.182",
+		"@types/uuid": "8.3.4",
+		"class-transformer": "0.5.1",
+		"eslint": "8.24.0",
+		"ethers": "5.7.1",
+		"json": "11.0.0",
+		"lodash": "4.17.21",
+		"type-fest": "2.19.0",
+		"typescript": "4.5.2",
+		"uuid": "8.3.2",
+		"zod": "3.19.1"
+	},
+	"devDependencies": {
+		"@sd/eslint-config-superdao": "workspace:*",
+		"@typechain/ethers-v5": "10.1.0",
+		"typechain": "8.1.0"
+	}
+}

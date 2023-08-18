@@ -1,0 +1,33 @@
+{
+	"$schema": "https://turborepo.org/schema.json",
+	"pipeline": {
+		"dev": {
+			"cache": false
+		},
+		"lint": {
+			"cache": true,
+			"inputs": ["src/**/*.js", "src/**/*.ts", "src/**/*.tsx"],
+			"outputs": []
+		},
+		"prebuild": {
+			"cache": false,
+			"dependsOn": []
+		},
+		"build": {
+			"cache": false,
+			"dependsOn": ["^build", "prebuild"]
+		},
+		"test": {
+			"cache": true,
+			"inputs": ["src/**/*.js", "src/**/*.ts", "src/**/*.tsx"],
+			"dependsOn": ["build"],
+			"outputs": []
+		},
+		"typecheck": {
+			"cache": true,
+			"inputs": ["src/**/*.js", "src/**/*.ts", "src/**/*.tsx"],
+			"outputs": []
+		}
+	},
+	"globalDependencies": [".env"]
+}

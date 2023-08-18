@@ -1,0 +1,10 @@
+{
+  "projects": {
+		"the-graph-stage": {
+			"includes": ["./src/gql/generation/schemas/schema.the-graph-stage.gql"]
+		},
+		"the-graph-prod": {
+			"includes": ["./src/gql/generation/schemas/schema.the-graph-prod.gql"]
+		}
+	}
+}

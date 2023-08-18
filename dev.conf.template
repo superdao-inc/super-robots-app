@@ -1,0 +1,25 @@
+server {
+	listen 8000;
+
+	location / {
+		proxy_pass ${FRONTEND_HOST};
+	}
+
+	location ~ ^/(api|graphql) {
+		proxy_pass ${BACKEND_HOST};
+	}
+
+	location ~ ^/(socket\.io) {
+		proxy_pass ${BACKEND_HOST};
+		proxy_http_version 1.1;
+		proxy_set_header Upgrade $http_upgrade;
+		proxy_set_header Connection "upgrade";
+	}
+
+	location ~ ^/(_next) {
+		proxy_pass ${FRONTEND_HOST};
+		proxy_http_version 1.1;
+		proxy_set_header Upgrade $http_upgrade;
+		proxy_set_header Connection "upgrade";
+	}
+}
